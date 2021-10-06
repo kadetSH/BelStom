@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+
+    >
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/id_dm_news"
+            android:icon="@drawable/news_white_50"
+            android:title="@string/drawer_menu_news" />
+        <item
+            android:id="@+id/id_dm_appointment"
+            android:icon="@drawable/pencil_50"
+            android:title="@string/drawer_menu_appointment"
+            />
+        <item
+            android:id="@+id/id_dm_my_map"
+            android:icon="@drawable/tooth_50"
+            android:title="@string/drawer_menu_my_map"
+            />
+        <item
+            android:id="@+id/id_dm_my_visit"
+            android:icon="@drawable/docs_80"
+            android:title="@string/drawer_menu_my_visit"
+            />
+        <item
+            android:id="@+id/id_dm_feedback"
+            android:icon="@drawable/feedback_50"
+            android:title="@string/drawer_menu_my_feedback"
+            />
+
+
+    </group>
+
+</menu>

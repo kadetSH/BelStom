@@ -1,0 +1,146 @@
+<resources>
+    <string name="app_name">BelStom</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <!--    Fragment_start-->
+    <string name="fragment_start_title">Белстом</string>
+    <string name="fragment_start_title_label_content">Здоровые зубы под \n контролем поликлиники</string>
+    <string name="fragment_start_btn">АВТОРИЗАЦИЯ</string>
+    <string name="fragment_start_label_reg">Нет пароля?</string>
+    <string name="fragment_start_edit_reg">Запрос пароля</string>
+    <!--    -->
+
+    <!--    Fragment_start_authorization-->
+    <string name="fragment_start_auth_title">Авторизация аккаунта</string>
+    <string name="fragment_start_auth_label_surname">Фамилия</string>
+    <string name="fragment_start_auth_label_name">Имя</string>
+    <string name="fragment_start_auth_label_patronymic">Отчество</string>
+    <string name="fragment_start_auth_label_password">Пароль</string>
+    <string name="fragment_start_auth_btn">Авторизоваться</string>
+    <string name="fragment_start_auth_msg">Продолжая, вы  подтверждаете согласие с нашей <font color='#1C88B5'>политикой конфиденциальности</font> и <font color='#1C88B5'>правилами использования</font>.</string>
+    <!--    -->
+
+    <!--    Fragment_profile-->
+    <string name="fragment_profile_hint_title">ФИО пациента</string>
+    <string name="fragment_profile_label_id">ID: </string>
+    <string name="fragment_profile_edit_gender">Пол, возраст</string>
+    <string name="fragment_profile_btn_my_map">Моя карта</string>
+    <string name="fragment_profile_btn_treatment_plan">План лечения</string>
+    <string name="fragment_profile_label_name">Имя</string>
+    <string name="fragment_profile_label_surname">Фамилия</string>
+    <string name="fragment_profile_label_patronymic">Отчество</string>
+    <string name="fragment_profile_label_telephone">Телефон</string>
+    <string name="fragment_profile_label_personal_information">Персональная информация</string>
+    <string name="fragment_profile_label_birth">День рождения</string>
+    <string name="fragment_profile_gender2">Пол</string>
+    <string name="fragment_profile_label_address">Адрес</string>
+    <string name="fragment_profile_btn_exit">ВЫЙТИ ИЗ АККАУНТА</string>
+    <!--    -->
+
+    <!--    Fragment_start_get_password-->
+    <string name="fragment_start_get_password_title">Запрос пароля</string>
+    <string name="fragment_start_get_password_label_surname">Фамилия</string>
+    <string name="fragment_start_get_password_label_name">Имя</string>
+    <string name="fragment_start_get_password_label_patronymic">Отчество</string>
+    <string name="fragment_start_get_password_label_telephone">Телефон в формате: "9101234567"</string>
+    <string name="fragment_start_get_password_hint_telephone">9101234567</string>
+    <string name="fragment_start_get_password_btn">Запрос</string>
+    <!--    -->
+
+    <!--    Toast ответы-->
+    <string name="toast_password_sent">Пароль отправлен по смс</string>
+    <string name="toast_password_client_found">Клиент найден</string>
+    <string name="toast_password_surname_filds">Поле «Фамилия» не заполнено</string>
+    <string name="toast_password_name_filds">Поле «Имя» не заполнено</string>
+    <string name="toast_password_patronymic_filds">Поле «Отчество» не заполнено</string>
+    <string name="toast_password_telephone_filds">Поле «Телефон» не заполнено</string>
+    <string name="toast_password_birth_filds">Поле «День рождения» не заполнено</string>
+    <string name="toast_authorization_password_filds">Поле «Пароль» не заполнено</string>
+    <string name="toast_password_error_request">Сбой запроса пароля</string>
+    <string name="toast_authorization_error_request">Сбой запроса идентификатора</string>
+    <string name="toast_authorization_id_found">Пароль верен</string>
+    <string name="toast_recording_time_is_busy">В данное время свободной записи нет.</string>
+    <string name="toast_make_an_appointment">Записаться на прием к врачу?</string>
+    <string name="labelYes" translatable="false">Да</string>
+    <string name="labelNo" translatable="false">Нет</string>
+    <string name="toast_no_reception">Нет приема</string>
+    <string name="toast_check_doctors">Совпадений ФИО врача не найдено</string>
+
+    <!--    -->
+
+    <!--    Drawer menu-->
+    <string name="drawer_menu_news">НОВОСТИ</string>
+    <string name="drawer_menu_appointment">ЗАПИСЬ НА ПРИЕМ</string>
+    <string name="drawer_menu_my_map">МОЯ КАРТА</string>
+    <string name="drawer_menu_my_visit">МОИ ЗАПИСИ</string>
+    <string name="drawer_menu_my_feedback">ОБРАТНАЯ СВЯЗЬ</string>
+    <string name="drawer_menu_news_description">Новости: описание</string>
+    <!--    -->
+
+    <!--    Template news-->
+    <string name="fragment_template_edit_date">Дата</string>
+    <string name="fragment_template_hint_date">Тема новостей</string>
+    <string name="fragment_template_btn">Просмотр</string>
+    <!--    -->
+
+    <!--    Fragment departments-->
+    <string name="fragment_list_department_label_title1">Запись на прием</string>
+    <string name="fragment_list_department_label_title2">Выберите необходимое отделение</string>
+    <string name="fragment_list_department_label_therapeutic"><u>Терапевтическое отделение</u></string>
+    <string name="fragment_list_department_label_orthopedic"><u>Ортопедическое отделение</u></string>
+    <string name="fragment_list_department_label_LPO"><u>ЛПО</u></string>
+    <string name="fragment_list_department_label_orthopedicLPO"><u>Ортопедия ЛПО</u></string>
+    <string name="fragment_list_department_label_surgery"><u>Хирургическое отделение</u></string>
+    <string name="fragment_list_department_label_LOR"><u>ЛОР</u></string>
+    <string name="fragment_list_department_auto_complete"><u>Поиск по фамилии</u></string>
+    <string name="fragment_list_department_btn_search"><u>Поиск</u></string>
+    <!--    -->
+
+    <!--    Названия фрагментов в титул-->
+    <string name="fragment_title_profile">Профиль</string>
+    <string name="fragment_title_news">Новости</string>
+    <string name="fragment_title_news_description">Новости: описание</string>
+    <string name="fragment_title_departments">Выбор подразделения</string>
+    <string name="fragment_title_schedule_doctor_therapeutic">-> Терапевтическое отделение</string>
+    <string name="fragment_title_schedule_doctor_orthopedic">-> Ортопедическое отделение</string>
+    <string name="fragment_title_schedule_doctor_LPO">-> ЛПО</string>
+    <string name="fragment_title_schedule_doctor_orthopedicLPO">-> Ортопедия ЛПО</string>
+    <string name="fragment_title_schedule_doctor_surgery">-> Хирургическое отделение</string>
+    <string name="fragment_title_schedule_doctor_LOR">-> ЛОР</string>
+    <string name="fragment_title_schedule_doctor_single">-> График врача</string>
+    <string name="fragment_title_schedule_doctor_single_time">-> Часы приема врача</string>
+    <string name="fragment_title_feedback">Обратная связь</string>
+    <!--    -->
+
+    <!--    Fragment Feedback-->
+    <string name="fragment_feedback_title">Стоматологическая поликлиника №1 города Белгорода — крупнейшее в центрально-черноземном регионе специализированное лечебное учреждение, оказывающее стоматологическую помощь на самом высоком уровне жителям Белгородской области и других регионов России.</string>
+    <string name="fragment_feedback_www_label">Адрес вебсайта</string>
+    <string name="fragment_feedback_www_edit">http://stomat1bel.belzdrav.ru</string>
+    <string name="fragment_feedback_telephone_reg_label">Телефон call центра</string>
+    <string name="fragment_feedback_telephone_reg_edit">+7(4722)257-157</string>
+    <string name="fragment_feedback_email_label">Электронная почта</string>
+    <string name="fragment_feedback_email_edit">belstom@belstom.com</string>
+    <string name="fragment_feedback_geolocation_label">Адрес поликлиники</string>
+    <string name="fragment_feedback_geolocation_edit">308000, Россия, Белгород, ул. Преображенская, 56</string>
+    <!--    -->
+
+    <!--    Template business hours-->
+    <string name="template_business_hours_time">Время</string>
+    <string name="template_business_title">Врач ФИО</string>
+    <string name="template_business_date">Дата</string>
+    <!--    -->
+
+    <!--    Child_period_days-->
+    <string name="template_child_period_days_day">День</string>
+    <string name="template_child_period_days_date">Дата</string>
+    <string name="template_child_period_days_reception">Прием</string>
+    <!--    -->
+
+    <!--    Template parent_period_days-->
+    <string name="template_parent_period_days_fio">Фамилия Имя Отчество</string>
+    <string name="template_parent_period_days_profession">Заведующий терапевтического отделения</string>
+    <!--    -->
+
+</resources>
