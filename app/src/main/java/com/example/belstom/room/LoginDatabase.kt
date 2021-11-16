@@ -14,12 +14,14 @@ import com.example.belstom.room.doctors.DoctorsDao
 import com.example.belstom.room.doctors.RDoctors
 import com.example.belstom.room.news.NewsDao
 import com.example.belstom.room.news.RNews
+import com.example.belstom.room.reception.RReception
+import com.example.belstom.room.reception.ReceptionDao
 import com.example.belstom.room.schedule.DepartmentScheduleDao
 import com.example.belstom.room.schedule.RDepartmentSchedule
 
 @Database(
     entities = [RLogin::class, RContactInformation::class, RNews::class,
-        RDepartmentSchedule::class, RDoctors::class], version = 7, exportSchema = false
+        RDepartmentSchedule::class, RDoctors::class, RReception::class], version = 8, exportSchema = false
 )
 abstract class LoginDatabase : RoomDatabase() {
 
@@ -28,6 +30,7 @@ abstract class LoginDatabase : RoomDatabase() {
     abstract fun getNewsDao(): NewsDao
     abstract fun getDepartmentScheduleDao(): DepartmentScheduleDao
     abstract fun getDoctorsDao(): DoctorsDao
+    abstract fun getReceptionDao(): ReceptionDao
 
     companion object {
         @Volatile

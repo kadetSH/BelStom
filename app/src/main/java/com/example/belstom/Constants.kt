@@ -13,6 +13,7 @@ object Constants {
     const val NAME_PUSH = "Название пуша"
     const val MESSAGE_PUSH = "Сообщение пуша"
     const val NEWS_ITEM = "Описание новости"
+    const val RECEPTION_ITEM = "Итем приема"
     const val DAYS_COUNT = 30
 
 }

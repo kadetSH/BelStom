@@ -70,8 +70,14 @@ class ProfileFragment : DaggerFragment() {
         editGender2 = binding.frProfileEditGender2
         editAddress = binding.frProfileEditAddress
         btnMyMap = binding.frProfileBtnMyMap
+        btnMyMap.setOnClickListener {
+            (activity as? OpenMyMap)?.clickOpenMyMap()
+        }
         btnTreatmentPlan = binding.frProfileBtnTreatmentPlan
         btnExit = binding.frProfileBtnExit
+        btnExit.setOnClickListener {
+            (activity as? ExitCabinet)?.clickExitCabinet()
+        }
     }
 
     private fun observeViewModel() {
@@ -91,6 +97,14 @@ class ProfileFragment : DaggerFragment() {
                     editAddress.text = patientInfo.address
                 }
             })
+    }
+
+    interface ExitCabinet{
+        fun clickExitCabinet()
+    }
+
+    interface OpenMyMap{
+        fun clickOpenMyMap()
     }
 
 }

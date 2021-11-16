@@ -1,6 +1,7 @@
 package com.example.belstom.dagger
 
 import android.app.Application
+import android.content.res.loader.ResourcesProvider
 import com.example.belstom.App
 import com.example.belstom.dagger.network.NetworkModule
 import com.example.belstom.dagger.room.RoomModule
@@ -21,7 +22,7 @@ import javax.inject.Singleton
         CabinetModule::class
     ]
 )
-interface AppComponent : AndroidInjector<App> {
+interface  AppComponent : AndroidInjector<App> {
 
 //    fun resources(): ResourcesProvider
 
@@ -29,6 +30,7 @@ interface AppComponent : AndroidInjector<App> {
     interface Builder {
         @BindsInstance
         fun application(application: Application): Builder
+//        fun application(resourcesProvider: ResourcesProvider): Builder
 
         fun build(): AppComponent
     }

@@ -16,6 +16,9 @@ import com.example.belstom.view.cabinet.news.fragment.NewsDescriptionFragment
 import com.example.belstom.view.cabinet.news.fragment.NewsFragment
 import com.example.belstom.view.cabinet.news.recyclerNews.NewsItem
 import com.example.belstom.view.cabinet.profile.fragment.ProfileFragment
+import com.example.belstom.view.cabinet.receptions.fragment.ReceptionDescriptionFragment
+import com.example.belstom.view.cabinet.receptions.fragment.ReceptionFragment
+import com.example.belstom.view.cabinet.receptions.recyclerReceptions.ReceptionItem
 import com.example.belstom.view.cabinet.schedule.fragment.BusinessHoursFragment
 import com.example.belstom.view.cabinet.schedule.fragment.DepartmentReceptionDaysDoctorsFragment
 import com.example.belstom.view.cabinet.schedule.fragment.DepartmentReceptionDaysFragment
@@ -30,7 +33,8 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
     DepartmentReceptionDaysFragment.OnDepartmentReceptionDaysClickListener,
     DepartmentsFragment.OnRequestDoctorsSchedule,
     FeedbackFragment.OpenFeedbackWWW, FeedbackFragment.DialingPhoneNumber,
-    FeedbackFragment.SendLetter
+    FeedbackFragment.SendLetter, ProfileFragment.ExitCabinet,
+        ReceptionFragment.OpenReceptionItem, ProfileFragment.OpenMyMap
 {
 
     object Crashlytics {
@@ -174,6 +178,9 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
             resources.getString(R.string.fragment_title_schedule_doctor_single_time) -> {
                 openDepartmentsFragment()
             }
+            resources.getString(R.string.fragment_title_reception_description) -> {
+                openReceptionFragment()
+            }
             else -> {
                 binding.drawerLayoutPatientActivity.openDrawer(GravityCompat.START)
             }
@@ -184,7 +191,7 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
         when (item.itemId) {
             R.id.id_dm_news -> openNews()
             R.id.id_dm_appointment -> openDepartmentsFragment()
-            R.id.id_dm_my_map -> println()
+            R.id.id_dm_my_map -> openReceptionFragment()
             R.id.id_dm_my_visit -> println()
             R.id.id_dm_feedback -> openFeedback()
         }
@@ -206,6 +213,16 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
             .commit()
     }
 
+    private fun openReceptionFragment() {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(
+                R.id.FrameLayoutContainerContact,
+                ReceptionFragment()
+            )
+            .commit()
+    }
+
     override fun openNewsDescriptionItem(newsItem: NewsItem) {
         openNewsDescriptionFragment(newsItem)
     }
@@ -216,6 +233,16 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
             .replace(
                 R.id.FrameLayoutContainerContact,
                 NewsDescriptionFragment.newInstance(newsItem)
+            )
+            .commit()
+    }
+
+    private fun openReceptionDescriptionFragment(receptionItem: ReceptionItem) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(
+                R.id.FrameLayoutContainerContact,
+                ReceptionDescriptionFragment.newInstance(receptionItem)
             )
             .commit()
     }
@@ -285,6 +312,20 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
             )
         )
         startActivity(Intent.createChooser(emailIntent, "Письмо в стомат. поликлинику"))
+    }
+
+    override fun clickExitCabinet() {
+        finish()
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
+    override fun openReceptionDescriptionItem(receptionItem: ReceptionItem) {
+        openReceptionDescriptionFragment(receptionItem)
+    }
+
+    override fun clickOpenMyMap() {
+        openReceptionFragment()
     }
 
 

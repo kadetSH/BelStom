@@ -27,7 +27,7 @@
     <string name="fragment_profile_label_id">ID: </string>
     <string name="fragment_profile_edit_gender">Пол, возраст</string>
     <string name="fragment_profile_btn_my_map">Моя карта</string>
-    <string name="fragment_profile_btn_treatment_plan">План лечения</string>
+    <string name="fragment_profile_btn_treatment_plan">Мои записи</string>
     <string name="fragment_profile_label_name">Имя</string>
     <string name="fragment_profile_label_surname">Фамилия</string>
     <string name="fragment_profile_label_patronymic">Отчество</string>
@@ -37,6 +37,15 @@
     <string name="fragment_profile_gender2">Пол</string>
     <string name="fragment_profile_label_address">Адрес</string>
     <string name="fragment_profile_btn_exit">ВЫЙТИ ИЗ АККАУНТА</string>
+    <!--    -->
+
+    <!--    Messaging service-->
+    <string name="uploadWorker_title">Название пуша</string>
+    <string name="uploadWorker_message">Сообщение пуша</string>
+    <string name="uploadWorker_item">Push item</string>
+    <string name="uploadWorker_channelName" translatable="false">Channel name</string>
+    <string name="uploadWorker_channelDescription" translatable="false">Channel description"</string>
+    <string name="uploadWorker_clickMe" translatable="false">Нажать</string>
     <!--    -->
 
     <!--    Fragment_start_get_password-->
@@ -85,6 +94,29 @@
     <string name="fragment_template_btn">Просмотр</string>
     <!--    -->
 
+    <!--    Template reception-->
+    <string name="fragment_template_reception_edit_title">Лечение зуба</string>
+    <string name="fragment_template_reception_edit_date">Дата приема</string>
+    <string name="fragment_template_reception_label_doctor">Врач: </string>
+    <string name="fragment_template_reception_edit_doctor">Сотрудник ФИО</string>
+    <string name="fragment_template_reception_label_cavity">Зуб(ы)/полость:  </string>
+    <string name="fragment_template_reception_edit_cavity">Полость</string>
+    <!--    -->
+
+    <!--    Template visits-->
+    <string name="fragment_template_visits_edit_title">Запись к врачу</string>
+    <string name="fragment_template_visits_edit_date">Дата записи</string>
+    <string name="fragment_template_visits_label_doctor">Врач: </string>
+    <string name="fragment_template_visits_edit_doctor">Сотрудник ФИО</string>
+    <string name="fragment_template_visits_label_cavity">Зуб(ы)/полость:  </string>
+    <string name="fragment_template_visits_edit_cavity">Полость</string>
+    <!--    -->
+
+    <!--    Template reception description-->
+    <string name="fragment_template_reception_description_edit_procedure">Процедура</string>
+    <string name="fragment_template_reception_description_edit_cavity">Полость</string>
+    <!--    -->
+
     <!--    Fragment departments-->
     <string name="fragment_list_department_label_title1">Запись на прием</string>
     <string name="fragment_list_department_label_title2">Выберите необходимое отделение</string>
@@ -112,6 +144,11 @@
     <string name="fragment_title_schedule_doctor_single">-> График врача</string>
     <string name="fragment_title_schedule_doctor_single_time">-> Часы приема врача</string>
     <string name="fragment_title_feedback">Обратная связь</string>
+    <string name="fragment_title_start_fragment">Начальная страница</string>
+    <string name="fragment_title_get_password_fragment">Получение пароля</string>
+    <string name="fragment_title_authorization_fragment">Авторизация</string>
+    <string name="fragment_title_reception">Посещения врача</string>
+    <string name="fragment_title_reception_description">Описание посещения</string>
     <!--    -->
 
     <!--    Fragment Feedback-->

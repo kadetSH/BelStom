@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.belstom.R
+import com.example.belstom.TitleController
 import com.example.belstom.databinding.FragmentStartAuthorizationBinding
 import com.example.belstom.databinding.FragmentStartGetPasswordBinding
 import com.example.belstom.jsonMy.ClientItem
@@ -43,6 +44,9 @@ class StartGetPasswordFragment : DaggerFragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        (activity as? TitleController)?.setTitle(
+            requireContext().resources.getString(R.string.fragment_title_get_password_fragment)
+        )
         observeViewModel()
         init()
 

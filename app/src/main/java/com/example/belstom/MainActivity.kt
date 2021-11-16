@@ -7,12 +7,15 @@ import com.example.belstom.jsonMy.ClientItem
 import com.example.belstom.view.authorization.fragment.StartAuthorizationFragment
 import com.example.belstom.view.authorization.fragment.StartFragment
 import com.example.belstom.view.authorization.fragment.StartGetPasswordFragment
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.google.firebase.messaging.FirebaseMessaging
 import dagger.android.support.DaggerAppCompatActivity
 
 class MainActivity : DaggerAppCompatActivity(), CheckClickView,
     StartGetPasswordFragment.OnBackPressedIsAuthorization,
-    StartAuthorizationFragment.StartIntentCabinet{
+    StartAuthorizationFragment.StartIntentCabinet,
+    TitleController{
 
 
 
@@ -34,6 +37,11 @@ class MainActivity : DaggerAppCompatActivity(), CheckClickView,
         }
 
 
+        FirebaseMessaging.getInstance().subscribeToTopic("all")
+
+       val qwe = intent.getStringExtra("titl")
+
+        println("")
     }
 
 
@@ -74,6 +82,7 @@ class MainActivity : DaggerAppCompatActivity(), CheckClickView,
     }
 
     private fun startCabinetActivity(surname: String, name: String, patronymic: String) {
+        finish()
         val intent = Intent(this, CabinetActivity::class.java)
         intent.putExtra(CabinetActivity.EXTRA_SURNAME, surname)
         intent.putExtra(CabinetActivity.EXTRA_NAME, name)
@@ -91,5 +100,23 @@ class MainActivity : DaggerAppCompatActivity(), CheckClickView,
 
     override fun startIntentCabinet(surname: String, name: String, patronymic: String) {
         startCabinetActivity(surname, name, patronymic)
+    }
+
+    override fun onBackPressed() {
+        when (title) {
+            resources.getString(R.string.fragment_title_start_fragment) -> {
+                finish()
+            }
+            resources.getString(R.string.fragment_title_get_password_fragment) -> {
+                isActivation()
+            }
+            resources.getString(R.string.fragment_title_authorization_fragment) -> {
+                isActivation()
+            }
+        }
+    }
+
+    override fun setTitle(titleIsFragment: String) {
+        title = titleIsFragment
     }
 }

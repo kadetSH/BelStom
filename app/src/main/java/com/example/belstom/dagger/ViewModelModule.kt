@@ -9,6 +9,8 @@ import com.example.belstom.view.cabinet.feedback.viewModel.FeedbackViewModel
 import com.example.belstom.view.cabinet.news.viewModel.NewsDescriptionViewModel
 import com.example.belstom.view.cabinet.news.viewModel.NewsViewModel
 import com.example.belstom.view.cabinet.profile.viewModel.ProfileViewModel
+import com.example.belstom.view.cabinet.receptions.viewModel.ReceptionDescriptionViewModel
+import com.example.belstom.view.cabinet.receptions.viewModel.ReceptionViewModel
 import com.example.belstom.view.cabinet.schedule.viewModel.BusinessHoursViewModel
 import com.example.belstom.view.cabinet.schedule.viewModel.DepartmentReceptionDaysDoctorsViewModel
 import com.example.belstom.view.cabinet.schedule.viewModel.DepartmentReceptionDaysViewModel
@@ -76,6 +78,16 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(FeedbackViewModel::class)
     abstract fun bindFeedbackViewModel(favoritesFilmsViewModel: FeedbackViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ReceptionViewModel::class)
+    abstract fun bindReceptionViewModel(favoritesFilmsViewModel: ReceptionViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ReceptionDescriptionViewModel::class)
+    abstract fun bindReceptionDescriptionViewModel(favoritesFilmsViewModel: ReceptionDescriptionViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory

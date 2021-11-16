@@ -9,6 +9,7 @@ import com.example.belstom.room.authorization.RLogin
 import com.example.belstom.room.contactInformation.ContactInformationDao
 import com.example.belstom.room.doctors.DoctorsDao
 import com.example.belstom.room.doctors.RDoctors
+import com.example.belstom.room.reception.ReceptionDao
 import com.example.belstom.room.schedule.DepartmentScheduleDao
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
@@ -18,7 +19,8 @@ class AuthorizationInteractor(
     private val authorizationDao: AuthorizationDao,
     private val contactInformationDao: ContactInformationDao,
     private val departmentScheduleDao: DepartmentScheduleDao,
-    private val doctorsDao: DoctorsDao
+    private val doctorsDao: DoctorsDao,
+    private val receptionsDao: ReceptionDao
 ) {
 
     fun getAuthorization(
@@ -90,6 +92,7 @@ class AuthorizationInteractor(
     private fun clearDuplicateTables() {
         departmentScheduleDao.deleteAllDepartmentSchedule()
         doctorsDao.deleteAllDoctors()
+        receptionsDao.deleteAllReceptions()
     }
 
     @SuppressLint("CheckResult")

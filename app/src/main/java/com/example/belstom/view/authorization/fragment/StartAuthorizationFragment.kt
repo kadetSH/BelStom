@@ -14,6 +14,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.belstom.CheckClickView
 import com.example.belstom.R
+import com.example.belstom.TitleController
 import com.example.belstom.databinding.FragmentStartAuthorizationBinding
 import com.example.belstom.jsonMy.ClientItem
 import com.example.belstom.room.authorization.RLogin
@@ -61,6 +62,9 @@ class StartAuthorizationFragment : DaggerFragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        (activity as? TitleController)?.setTitle(
+            requireContext().resources.getString(R.string.fragment_title_authorization_fragment)
+        )
         arguments?.let { arg ->
             clientItem = arg.getSerializable(EXTRA_LOGIN) as ClientItem
         }

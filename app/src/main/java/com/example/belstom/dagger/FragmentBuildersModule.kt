@@ -7,6 +7,8 @@ import com.example.belstom.view.cabinet.feedback.fragment.FeedbackFragment
 import com.example.belstom.view.cabinet.news.fragment.NewsDescriptionFragment
 import com.example.belstom.view.cabinet.news.fragment.NewsFragment
 import com.example.belstom.view.cabinet.profile.fragment.ProfileFragment
+import com.example.belstom.view.cabinet.receptions.fragment.ReceptionDescriptionFragment
+import com.example.belstom.view.cabinet.receptions.fragment.ReceptionFragment
 import com.example.belstom.view.cabinet.schedule.fragment.BusinessHoursFragment
 import com.example.belstom.view.cabinet.schedule.fragment.DepartmentReceptionDaysDoctorsFragment
 import com.example.belstom.view.cabinet.schedule.fragment.DepartmentReceptionDaysFragment
@@ -49,6 +51,12 @@ abstract class FragmentBuildersModule {
 
     @ContributesAndroidInjector
     abstract fun contributeFeedbackFragment(): FeedbackFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeReceptionFragment(): ReceptionFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeReceptionDescriptionFragment(): ReceptionDescriptionFragment
 
 
 }

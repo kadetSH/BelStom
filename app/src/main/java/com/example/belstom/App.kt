@@ -2,20 +2,19 @@ package com.example.belstom
 
 
 import com.example.belstom.dagger.DaggerAppComponent
-import com.example.belstom.dagger.network.repository.RetrofitServiceInterfaceAuthorization
-import com.example.belstom.dagger.network.repository.RetrofitServiceInterfaceContactInformation
-import com.example.belstom.dagger.network.repository.RetrofitServiceInterfaceNews
-import com.example.belstom.dagger.network.repository.RetrofitServiceInterfaceSchedule
+import com.example.belstom.dagger.network.repository.*
 import com.example.belstom.view.authorization.interactor.AuthorizationInteractor
 import com.example.belstom.view.authorization.interactor.GetPasswordInteractor
 import com.example.belstom.room.authorization.AuthorizationDao
 import com.example.belstom.room.contactInformation.ContactInformationDao
 import com.example.belstom.room.doctors.DoctorsDao
 import com.example.belstom.room.news.NewsDao
+import com.example.belstom.room.reception.ReceptionDao
 import com.example.belstom.room.schedule.DepartmentScheduleDao
 import com.example.belstom.view.cabinet.news.interactor.NewsDescriptionInteractor
 import com.example.belstom.view.cabinet.news.interactor.NewsInteractor
 import com.example.belstom.view.cabinet.profile.interactor.ProfileInteractor
+import com.example.belstom.view.cabinet.receptions.interactor.ReceptionInteractor
 import com.example.belstom.view.cabinet.schedule.interactor.DepartmentReceptionDaysInteractor
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
@@ -37,6 +36,9 @@ class App : DaggerApplication() {
     @Inject
     lateinit var retrofitServiceInterfaceSchedule: RetrofitServiceInterfaceSchedule
 
+    @Inject
+    lateinit var retrofitServiceInterfaceReception: RetrofitServiceInterfaceReception
+
 
     @Inject
     lateinit var authorizationDao: AuthorizationDao
@@ -53,13 +55,19 @@ class App : DaggerApplication() {
     @Inject
     lateinit var doctorsDao: DoctorsDao
 
+    @Inject
+    lateinit var receptionsDao: ReceptionDao
+
     lateinit var authorizationInteractor: AuthorizationInteractor
     lateinit var getPasswordInteractor: GetPasswordInteractor
     lateinit var getProfileInteractor: ProfileInteractor
     lateinit var getNewsInteractor: NewsInteractor
     lateinit var getNewsDescriptionInteractor: NewsDescriptionInteractor
     lateinit var getDepartmentReceptionDaysInteractor: DepartmentReceptionDaysInteractor
+    lateinit var getReceptionInteractor: ReceptionInteractor
 
+//    @Inject
+//    lateinit var appComponent: AppComponent
 
     override fun onCreate() {
         super.onCreate()
@@ -73,7 +81,8 @@ class App : DaggerApplication() {
             authorizationDao,
             contactInformationDao,
             departmentScheduleDao,
-            doctorsDao
+            doctorsDao,
+            receptionsDao
 //            contactNewsDao,
 //            visitHistoryDao,
 //            xRaysDao,
@@ -108,9 +117,15 @@ class App : DaggerApplication() {
             authorizationDao,
             doctorsDao
         )
+
+        getReceptionInteractor = ReceptionInteractor(
+            retrofitServiceInterfaceReception,
+            authorizationDao,
+            receptionsDao
+        )
     }
 
-    private val applicationInjector = DaggerAppComponent.builder().application(this).build()
+    private val applicationInjector = DaggerAppComponent.builder().application(this).build()  //application(this).build()
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> = applicationInjector
 
 

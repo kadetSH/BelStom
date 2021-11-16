@@ -1,10 +1,7 @@
 package com.example.belstom.dagger.network
 
 import com.example.belstom.BuildConfig
-import com.example.belstom.dagger.network.repository.RetrofitServiceInterfaceAuthorization
-import com.example.belstom.dagger.network.repository.RetrofitServiceInterfaceContactInformation
-import com.example.belstom.dagger.network.repository.RetrofitServiceInterfaceNews
-import com.example.belstom.dagger.network.repository.RetrofitServiceInterfaceSchedule
+import com.example.belstom.dagger.network.repository.*
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -66,6 +63,12 @@ class NetworkModule {
     @Provides
     fun getRetrofitServiceInterfaceSchedule(retrofit: Retrofit): RetrofitServiceInterfaceSchedule {
         return retrofit.create(RetrofitServiceInterfaceSchedule::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun getRetrofitServiceInterfaceReception(retrofit: Retrofit): RetrofitServiceInterfaceReception {
+        return retrofit.create(RetrofitServiceInterfaceReception::class.java)
     }
 
 
