@@ -74,6 +74,9 @@ class ProfileFragment : DaggerFragment() {
             (activity as? OpenMyMap)?.clickOpenMyMap()
         }
         btnTreatmentPlan = binding.frProfileBtnTreatmentPlan
+        btnTreatmentPlan.setOnClickListener {
+            (activity as? OpenMyVisits)?.clickOpenMyVisits()
+        }
         btnExit = binding.frProfileBtnExit
         btnExit.setOnClickListener {
             (activity as? ExitCabinet)?.clickExitCabinet()
@@ -105,6 +108,10 @@ class ProfileFragment : DaggerFragment() {
 
     interface OpenMyMap{
         fun clickOpenMyMap()
+    }
+
+    interface OpenMyVisits{
+        fun clickOpenMyVisits()
     }
 
 }

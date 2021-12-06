@@ -71,5 +71,11 @@ class NetworkModule {
         return retrofit.create(RetrofitServiceInterfaceReception::class.java)
     }
 
+    @Singleton
+    @Provides
+    fun getRetrofitServiceInterfaceVisits(retrofit: Retrofit): RetrofitServiceInterfaceVisits {
+        return retrofit.create(RetrofitServiceInterfaceVisits::class.java)
+    }
+
 
 }

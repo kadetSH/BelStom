@@ -23,6 +23,7 @@ import com.example.belstom.view.cabinet.schedule.fragment.BusinessHoursFragment
 import com.example.belstom.view.cabinet.schedule.fragment.DepartmentReceptionDaysDoctorsFragment
 import com.example.belstom.view.cabinet.schedule.fragment.DepartmentReceptionDaysFragment
 import com.example.belstom.view.cabinet.schedule.fragment.DepartmentsFragment
+import com.example.belstom.view.cabinet.visits.fragment.VisitsFragment
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.android.support.DaggerAppCompatActivity
@@ -34,7 +35,8 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
     DepartmentsFragment.OnRequestDoctorsSchedule,
     FeedbackFragment.OpenFeedbackWWW, FeedbackFragment.DialingPhoneNumber,
     FeedbackFragment.SendLetter, ProfileFragment.ExitCabinet,
-        ReceptionFragment.OpenReceptionItem, ProfileFragment.OpenMyMap
+        ReceptionFragment.OpenReceptionItem, ProfileFragment.OpenMyMap,
+        ProfileFragment.OpenMyVisits
 {
 
     object Crashlytics {
@@ -78,7 +80,6 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
 
         //Слушаем нажатие в выпадающем меню
         binding.idNavigation.setNavigationItemSelectedListener(this)
-        val qwe = title
         val fragmentManager: FragmentManager = supportFragmentManager
         val fragments: MutableList<androidx.fragment.app.Fragment> = fragmentManager.fragments
         if (fragments.size == 0) {
@@ -90,18 +91,18 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
     private fun checkIntent() {
         val header0 = binding.idNavigation.getHeaderView(0)
 
-        intent.getStringExtra(EXTRA_SURNAME)?.let { surname ->
-            val titleSurname = header0.findViewById<TextView>(R.id.id_hm_edit_surname)
-            titleSurname.text = surname
-        }
-        intent.getStringExtra(EXTRA_NAME)?.let { name ->
-            val titleName = header0.findViewById<TextView>(R.id.id_hm_edit_name)
-            titleName.text = name
-        }
-        intent.getStringExtra(EXTRA_PATRONYMIC)?.let { patronymic ->
-            val titlePatronymic = header0.findViewById<TextView>(R.id.id_hm_edit_patronymic)
-            titlePatronymic.text = patronymic
-        }
+//        intent.getStringExtra(EXTRA_SURNAME)?.let { surname ->
+//            val titleSurname = header0.findViewById<TextView>(R.id.id_hm_edit_surname)
+//            titleSurname.text = surname
+//        }
+//        intent.getStringExtra(EXTRA_NAME)?.let { name ->
+//            val titleName = header0.findViewById<TextView>(R.id.id_hm_edit_name)
+//            titleName.text = name
+//        }
+//        intent.getStringExtra(EXTRA_PATRONYMIC)?.let { patronymic ->
+//            val titlePatronymic = header0.findViewById<TextView>(R.id.id_hm_edit_patronymic)
+//            titlePatronymic.text = patronymic
+//        }
 
         val heading = header0.findViewById<RelativeLayout>(R.id.id_header_menu)
         heading.setOnClickListener {
@@ -189,10 +190,11 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.id_dm_profile -> openContactInformation()
             R.id.id_dm_news -> openNews()
             R.id.id_dm_appointment -> openDepartmentsFragment()
             R.id.id_dm_my_map -> openReceptionFragment()
-            R.id.id_dm_my_visit -> println()
+            R.id.id_dm_my_visit -> openVisitsFragment()
             R.id.id_dm_feedback -> openFeedback()
         }
         binding.drawerLayoutPatientActivity.closeDrawer(GravityCompat.START)
@@ -219,6 +221,16 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
             .replace(
                 R.id.FrameLayoutContainerContact,
                 ReceptionFragment()
+            )
+            .commit()
+    }
+
+    private fun openVisitsFragment() {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(
+                R.id.FrameLayoutContainerContact,
+                VisitsFragment()
             )
             .commit()
     }
@@ -326,6 +338,10 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
 
     override fun clickOpenMyMap() {
         openReceptionFragment()
+    }
+
+    override fun clickOpenMyVisits() {
+        openVisitsFragment()
     }
 
 

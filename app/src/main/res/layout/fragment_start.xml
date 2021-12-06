@@ -31,7 +31,9 @@
             android:text="@string/fragment_start_title_label_content"
             android:textColor="@color/black"
             android:textSize="28sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/mon_amour_one_medium"
+            />
 
         <Button
             android:id="@+id/fr_start_btn"

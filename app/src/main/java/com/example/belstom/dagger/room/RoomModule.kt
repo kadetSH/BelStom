@@ -8,6 +8,7 @@ import com.example.belstom.room.doctors.DoctorsDao
 import com.example.belstom.room.news.NewsDao
 import com.example.belstom.room.reception.ReceptionDao
 import com.example.belstom.room.schedule.DepartmentScheduleDao
+import com.example.belstom.room.visits.VisitsDao
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -55,6 +56,12 @@ class RoomModule {
     @Provides
     fun getReceptionDao(loginDatabase: LoginDatabase): ReceptionDao {
         return loginDatabase.getReceptionDao()
+    }
+
+    @Singleton
+    @Provides
+    fun getVisitsDao(loginDatabase: LoginDatabase): VisitsDao {
+        return loginDatabase.getVisitsDao()
     }
 
 }

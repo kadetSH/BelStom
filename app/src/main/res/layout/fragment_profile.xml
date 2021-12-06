@@ -19,7 +19,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/background_fields_info"
+
                 android:orientation="vertical">
 
                 <TextView
@@ -32,13 +32,13 @@
                     android:hint="@string/fragment_profile_hint_title"
                     android:textColor="@color/black"
                     android:textSize="24sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="90dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -47,7 +47,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_profile_label_id"
                         android:textColor="@color/black"
-                        android:textSize="18dp"/>
+                        android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/fr_profile_edit_id"
@@ -55,29 +55,30 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/fragment_profile_label_id"
                         android:textColor="@color/black"
-                        android:textSize="18dp"/>
+                        android:textSize="18dp" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/fr_profile_edit_gender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="90dp"
+                    android:layout_gravity="center"
                     android:hint="@string/fragment_profile_edit_gender"
                     android:textColor="@color/black"
-                    android:textSize="18dp"/>
+                    android:textSize="18dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
+
                     android:gravity="center"
                     android:orientation="horizontal">
 
 
                     <Button
                         android:id="@+id/fr_profile_btn_my_map"
-                        android:layout_width="wrap_content"
+                        android:layout_width="160dp"
                         android:layout_height="50dp"
                         android:backgroundTint="@color/btn_color"
                         android:text="@string/fragment_profile_btn_my_map"
@@ -88,9 +89,9 @@
 
                     <Button
                         android:id="@+id/fr_profile_btn_treatment_plan"
-                        android:layout_width="wrap_content"
+                        android:layout_width="160dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="10dp"
                         android:backgroundTint="@color/btn_color"
                         android:text="@string/fragment_profile_btn_treatment_plan"
                         android:textSize="10sp"
@@ -104,7 +105,8 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/delimiter" />
 
             <TextView
@@ -123,13 +125,13 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:textSize="16dp"
                 android:hint="@string/fragment_profile_label_name"
-                android:textColor="@color/text_profile" />
+                android:textColor="@color/text_profile"
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/delimiter" />
 
@@ -151,11 +153,11 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_label_surname"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/delimiter" />
 
@@ -177,11 +179,11 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_label_patronymic"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/delimiter" />
 
@@ -203,11 +205,11 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_label_telephone"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
+                android:layout_height="2dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/delimiter" />
 
@@ -216,7 +218,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginStart="10dp"
-                android:background="@color/background_fields_info"
                 android:gravity="center_vertical"
                 android:text="@string/fragment_profile_label_personal_information"
                 android:textColor="@color/black"
@@ -245,11 +246,11 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_label_birth"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/delimiter" />
 
@@ -271,11 +272,11 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_gender2"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/delimiter" />
 
@@ -297,37 +298,29 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_label_address"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/delimiter" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:gravity="center"
                 android:background="@color/background_fields_info"
-                >
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/fr_profile_btn_exit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/fragment_profile_btn_exit"
-                    android:textColor="@color/text_signature"
                     android:backgroundTint="@color/white"
-                    />
+                    android:text="@string/fragment_profile_btn_exit"
+                    android:textColor="@color/text_signature" />
 
             </LinearLayout>
-
-
-
-
-
-
 
 
         </LinearLayout>

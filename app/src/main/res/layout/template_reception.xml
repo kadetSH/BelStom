@@ -5,102 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:background="@android:drawable/editbox_background"
-    >
+    android:background="@android:drawable/editbox_background">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
-            >
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                app:srcCompat="@drawable/dentist_chair"
-
-                />
-
-        </LinearLayout>
-
+            app:srcCompat="@drawable/dentist_chair" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:orientation="vertical">
 
-            <LinearLayout
+
+            <!--                    -->
+            <TextView
+                android:id="@+id/template_reception_edit_title"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:hint="@string/fragment_template_reception_edit_title"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/template_reception_edit_date"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    >
-<!--                    -->
-                    <TextView
-                        android:id="@+id/template_reception_edit_title"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="@string/fragment_template_reception_edit_title"
-                        android:inputType="textCapSentences|textMultiLine"
-                        android:maxLines="2"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/template_reception_edit_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:hint="@string/fragment_template_reception_edit_date"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        />
-                </LinearLayout>
-
-                <ImageView
-                    android:id="@+id/template_reception_icon_open_description"
-                    android:layout_width="40dp"
-                    android:layout_height="35dp"
-                    android:background="@drawable/open_reception_20"
-                    android:visibility="invisible"
-                    />
-
-
-            </LinearLayout>
-
-<!--            <TextView-->
-<!--                android:id="@+id/template_reception_edit_title"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:hint="@string/fragment_template_reception_edit_title"-->
-<!--                android:inputType="textCapSentences|textMultiLine"-->
-<!--                android:maxLines="2"-->
-<!--                android:textStyle="bold"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="14sp" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/template_reception_edit_date"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:hint="@string/fragment_template_reception_edit_date"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="14sp"-->
-<!--                />-->
+                android:hint="@string/fragment_template_reception_edit_date"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -112,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/fragment_template_reception_label_doctor"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/template_reception_edit_doctor"
@@ -122,21 +68,23 @@
                     android:inputType="textCapSentences|textMultiLine"
                     android:maxLines="2"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                >
 
                 <TextView
                     android:id="@+id/template_reception_label_cavity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/fragment_template_reception_label_cavity"
-                    android:textSize="10sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/template_reception_edit_cavity"
@@ -144,16 +92,17 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/fragment_template_reception_edit_cavity"
                     android:inputType="textCapSentences|textMultiLine"
-                    android:maxLines="4"
+                    android:maxLines="2"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textSize="12sp"
+
+                    />
 
                 <TextView
                     android:id="@+id/template_reception_edit_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="invisible"
-                    />
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible" />
 
             </LinearLayout>
 

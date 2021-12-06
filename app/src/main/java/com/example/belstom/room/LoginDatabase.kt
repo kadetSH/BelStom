@@ -18,10 +18,12 @@ import com.example.belstom.room.reception.RReception
 import com.example.belstom.room.reception.ReceptionDao
 import com.example.belstom.room.schedule.DepartmentScheduleDao
 import com.example.belstom.room.schedule.RDepartmentSchedule
+import com.example.belstom.room.visits.RVisits
+import com.example.belstom.room.visits.VisitsDao
 
 @Database(
-    entities = [RLogin::class, RContactInformation::class, RNews::class,
-        RDepartmentSchedule::class, RDoctors::class, RReception::class], version = 8, exportSchema = false
+    entities = [RLogin::class, RContactInformation::class, RNews::class, RDepartmentSchedule::class,
+        RDoctors::class, RReception::class, RVisits::class], version = 9, exportSchema = false
 )
 abstract class LoginDatabase : RoomDatabase() {
 
@@ -31,6 +33,7 @@ abstract class LoginDatabase : RoomDatabase() {
     abstract fun getDepartmentScheduleDao(): DepartmentScheduleDao
     abstract fun getDoctorsDao(): DoctorsDao
     abstract fun getReceptionDao(): ReceptionDao
+    abstract fun getVisitsDao(): VisitsDao
 
     companion object {
         @Volatile

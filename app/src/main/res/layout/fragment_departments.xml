@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/btn_color"
+
     android:orientation="vertical">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:gravity="center"
+        android:gravity="left"
         android:text="@string/fragment_list_department_label_title1"
         android:textColor="@color/delimiter"
         android:textSize="18sp"
@@ -34,6 +34,7 @@
         android:text="@string/fragment_list_department_label_title2"
         android:textColor="@color/delimiter"
         android:textSize="16sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/id_list_department_label_title1"
         app:layout_constraintStart_toStartOf="@+id/id_list_department_label_title1"
         app:layout_constraintTop_toBottomOf="@+id/id_list_department_label_title1" />

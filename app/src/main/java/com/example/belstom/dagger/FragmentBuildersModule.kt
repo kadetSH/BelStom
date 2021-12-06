@@ -13,6 +13,7 @@ import com.example.belstom.view.cabinet.schedule.fragment.BusinessHoursFragment
 import com.example.belstom.view.cabinet.schedule.fragment.DepartmentReceptionDaysDoctorsFragment
 import com.example.belstom.view.cabinet.schedule.fragment.DepartmentReceptionDaysFragment
 import com.example.belstom.view.cabinet.schedule.fragment.DepartmentsFragment
+import com.example.belstom.view.cabinet.visits.fragment.VisitsFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -57,6 +58,9 @@ abstract class FragmentBuildersModule {
 
     @ContributesAndroidInjector
     abstract fun contributeReceptionDescriptionFragment(): ReceptionDescriptionFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributeVisitsFragment(): VisitsFragment
 
 
 }

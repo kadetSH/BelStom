@@ -11,11 +11,13 @@ import com.example.belstom.room.doctors.DoctorsDao
 import com.example.belstom.room.news.NewsDao
 import com.example.belstom.room.reception.ReceptionDao
 import com.example.belstom.room.schedule.DepartmentScheduleDao
+import com.example.belstom.room.visits.VisitsDao
 import com.example.belstom.view.cabinet.news.interactor.NewsDescriptionInteractor
 import com.example.belstom.view.cabinet.news.interactor.NewsInteractor
 import com.example.belstom.view.cabinet.profile.interactor.ProfileInteractor
 import com.example.belstom.view.cabinet.receptions.interactor.ReceptionInteractor
 import com.example.belstom.view.cabinet.schedule.interactor.DepartmentReceptionDaysInteractor
+import com.example.belstom.view.cabinet.visits.interactor.VisitsInteractor
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 import javax.inject.Inject
@@ -39,6 +41,9 @@ class App : DaggerApplication() {
     @Inject
     lateinit var retrofitServiceInterfaceReception: RetrofitServiceInterfaceReception
 
+    @Inject
+    lateinit var retrofitServiceInterfaceVisits: RetrofitServiceInterfaceVisits
+
 
     @Inject
     lateinit var authorizationDao: AuthorizationDao
@@ -58,6 +63,9 @@ class App : DaggerApplication() {
     @Inject
     lateinit var receptionsDao: ReceptionDao
 
+    @Inject
+    lateinit var visitsDao: VisitsDao
+
     lateinit var authorizationInteractor: AuthorizationInteractor
     lateinit var getPasswordInteractor: GetPasswordInteractor
     lateinit var getProfileInteractor: ProfileInteractor
@@ -65,6 +73,7 @@ class App : DaggerApplication() {
     lateinit var getNewsDescriptionInteractor: NewsDescriptionInteractor
     lateinit var getDepartmentReceptionDaysInteractor: DepartmentReceptionDaysInteractor
     lateinit var getReceptionInteractor: ReceptionInteractor
+    lateinit var getVisitsInteractor: VisitsInteractor
 
 //    @Inject
 //    lateinit var appComponent: AppComponent
@@ -82,7 +91,8 @@ class App : DaggerApplication() {
             contactInformationDao,
             departmentScheduleDao,
             doctorsDao,
-            receptionsDao
+            receptionsDao,
+            visitsDao
 //            contactNewsDao,
 //            visitHistoryDao,
 //            xRaysDao,
@@ -122,6 +132,12 @@ class App : DaggerApplication() {
             retrofitServiceInterfaceReception,
             authorizationDao,
             receptionsDao
+        )
+
+        getVisitsInteractor = VisitsInteractor(
+            retrofitServiceInterfaceVisits,
+            authorizationDao,
+            visitsDao
         )
     }
 

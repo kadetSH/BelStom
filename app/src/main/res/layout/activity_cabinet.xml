@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
+
     >
 
     <include
@@ -24,12 +25,20 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         android:layout_gravity="start"
+        android:background="@color/btn_color"
+        app:headerLayout="@layout/header_menu"
         app:menu="@menu/drawer_menu"
+
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/text_menu"
-        app:headerLayout="@layout/header_menu"
-        android:background="@color/btn_color"
+        app:itemBackground="@drawable/nav_item_drawable"
+
+
         />
+<!--    android:background="@color/btn_color"-->
+<!--    app:itemIconTint="@color/white"-->
+<!--    app:itemTextColor="@color/text_menu"-->
 
-
+<!--    app:itemBackground="@color/menu_color2"-->
+<!--    app:itemIconTint="@color/navigation_view_selector"-->
 </androidx.drawerlayout.widget.DrawerLayout>

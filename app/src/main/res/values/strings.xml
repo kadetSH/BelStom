@@ -26,7 +26,7 @@
     <string name="fragment_profile_hint_title">ФИО пациента</string>
     <string name="fragment_profile_label_id">ID: </string>
     <string name="fragment_profile_edit_gender">Пол, возраст</string>
-    <string name="fragment_profile_btn_my_map">Моя карта</string>
+    <string name="fragment_profile_btn_my_map">Мои посещения</string>
     <string name="fragment_profile_btn_treatment_plan">Мои записи</string>
     <string name="fragment_profile_label_name">Имя</string>
     <string name="fragment_profile_label_surname">Фамилия</string>
@@ -80,12 +80,17 @@
     <!--    -->
 
     <!--    Drawer menu-->
+    <string name="drawer_menu_profile">МОЙ ПРОФИЛЬ</string>
     <string name="drawer_menu_news">НОВОСТИ</string>
     <string name="drawer_menu_appointment">ЗАПИСЬ НА ПРИЕМ</string>
-    <string name="drawer_menu_my_map">МОЯ КАРТА</string>
+    <string name="drawer_menu_my_map">МОИ ПОСЕЩЕНИЯ</string>
     <string name="drawer_menu_my_visit">МОИ ЗАПИСИ</string>
     <string name="drawer_menu_my_feedback">ОБРАТНАЯ СВЯЗЬ</string>
-    <string name="drawer_menu_news_description">Новости: описание</string>
+    <string name="drawer_menu_news_description">НОВОСТИ: ОПИСАНИЕ</string>
+    <!--    -->
+
+    <!--    Header-->
+    <string name="header_title">Белстом</string>
     <!--    -->
 
     <!--    Template news-->
@@ -99,7 +104,7 @@
     <string name="fragment_template_reception_edit_date">Дата приема</string>
     <string name="fragment_template_reception_label_doctor">Врач: </string>
     <string name="fragment_template_reception_edit_doctor">Сотрудник ФИО</string>
-    <string name="fragment_template_reception_label_cavity">Зуб(ы)/полость:  </string>
+    <string name="fragment_template_reception_label_cavity">Зуб/полость:  </string>
     <string name="fragment_template_reception_edit_cavity">Полость</string>
     <!--    -->
 
@@ -118,7 +123,7 @@
     <!--    -->
 
     <!--    Fragment departments-->
-    <string name="fragment_list_department_label_title1">Запись на прием</string>
+    <string name="fragment_list_department_label_title1">Выберите отделение</string>
     <string name="fragment_list_department_label_title2">Выберите необходимое отделение</string>
     <string name="fragment_list_department_label_therapeutic"><u>Терапевтическое отделение</u></string>
     <string name="fragment_list_department_label_orthopedic"><u>Ортопедическое отделение</u></string>
@@ -126,29 +131,30 @@
     <string name="fragment_list_department_label_orthopedicLPO"><u>Ортопедия ЛПО</u></string>
     <string name="fragment_list_department_label_surgery"><u>Хирургическое отделение</u></string>
     <string name="fragment_list_department_label_LOR"><u>ЛОР</u></string>
-    <string name="fragment_list_department_auto_complete"><u>Поиск по фамилии</u></string>
+    <string name="fragment_list_department_auto_complete"><u>Поиск врача по фамилии</u></string>
     <string name="fragment_list_department_btn_search"><u>Поиск</u></string>
     <!--    -->
 
     <!--    Названия фрагментов в титул-->
-    <string name="fragment_title_profile">Профиль</string>
-    <string name="fragment_title_news">Новости</string>
-    <string name="fragment_title_news_description">Новости: описание</string>
-    <string name="fragment_title_departments">Выбор подразделения</string>
-    <string name="fragment_title_schedule_doctor_therapeutic">-> Терапевтическое отделение</string>
-    <string name="fragment_title_schedule_doctor_orthopedic">-> Ортопедическое отделение</string>
+    <string name="fragment_title_profile">ПРОФИЛЬ</string>
+    <string name="fragment_title_news">НОВОСТИ</string>
+    <string name="fragment_title_news_description">НОВОСТИ: ОПИСАНИЕ</string>
+    <string name="fragment_title_departments">ЗАПИСЬ НА ПРИЕМ</string>
+    <string name="fragment_title_schedule_doctor_therapeutic">-> ТЕРАПЕВТИЧЕСКОЕ ОТДЕЛЕНИЕ</string>
+    <string name="fragment_title_schedule_doctor_orthopedic">-> ОРТОПЕДИЧЕСКОЕ ОТДЕЛЕНИЕ</string>
     <string name="fragment_title_schedule_doctor_LPO">-> ЛПО</string>
-    <string name="fragment_title_schedule_doctor_orthopedicLPO">-> Ортопедия ЛПО</string>
-    <string name="fragment_title_schedule_doctor_surgery">-> Хирургическое отделение</string>
+    <string name="fragment_title_schedule_doctor_orthopedicLPO">-> ОРТОПЕДИЯ ЛПО</string>
+    <string name="fragment_title_schedule_doctor_surgery">-> ХИРУРГИЧЕСКОЕ ОТДЕЛЕНИЕ</string>
     <string name="fragment_title_schedule_doctor_LOR">-> ЛОР</string>
-    <string name="fragment_title_schedule_doctor_single">-> График врача</string>
-    <string name="fragment_title_schedule_doctor_single_time">-> Часы приема врача</string>
-    <string name="fragment_title_feedback">Обратная связь</string>
-    <string name="fragment_title_start_fragment">Начальная страница</string>
-    <string name="fragment_title_get_password_fragment">Получение пароля</string>
-    <string name="fragment_title_authorization_fragment">Авторизация</string>
-    <string name="fragment_title_reception">Посещения врача</string>
-    <string name="fragment_title_reception_description">Описание посещения</string>
+    <string name="fragment_title_schedule_doctor_single">-> ГРАФИК ВРАЧА</string>
+    <string name="fragment_title_schedule_doctor_single_time">-> ЧАСЫ ПРИЕМА ВРАЧА</string>
+    <string name="fragment_title_feedback">ОБРАТНАЯ СВЯЗЬ</string>
+    <string name="fragment_title_start_fragment">НАЧАЛЬНАЯ СТРАНИЦА</string>
+    <string name="fragment_title_get_password_fragment">ПОЛУЧЕНИЕ ПАРОЛЯ</string>
+    <string name="fragment_title_authorization_fragment">АВТОРИЗАЦИЯ</string>
+    <string name="fragment_title_reception">ПОСЕЩЕНИЯ ВРАЧА</string>
+    <string name="fragment_title_reception_description">ОПИСАНИЕ ПОСЕЩЕНИЯ</string>
+    <string name="fragment_title_visits">МОИ ЗАПИСИ</string>
     <!--    -->
 
     <!--    Fragment Feedback-->
