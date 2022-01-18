@@ -8,6 +8,7 @@ import androidx.lifecycle.LiveData
 import com.example.belstom.App
 import com.example.belstom.R
 import com.example.belstom.SingleLiveEvent
+import com.example.belstom.jsonMy.AppointmentCreatedJS
 import com.example.belstom.jsonMy.BusinessHoursResultJS
 import com.example.belstom.jsonMy.CreateAnAppointmentJS
 import io.reactivex.schedulers.Schedulers
@@ -18,6 +19,9 @@ class BusinessHoursViewModel @Inject constructor(application: Application) :
 
     private var _toastMessage = SingleLiveEvent<String>()
     val toastMessage: LiveData<String> get() = _toastMessage
+
+    private var _checkAppointmentCreated = SingleLiveEvent<AppointmentCreatedJS>()
+    val checkAppointmentCreated: LiveData<AppointmentCreatedJS> get() = _checkAppointmentCreated
 
     private var _checkPeriodOfTime = SingleLiveEvent<CreateAnAppointmentJS>()
     val checkPeriodOfTime: LiveData<CreateAnAppointmentJS> get() = _checkPeriodOfTime
@@ -64,6 +68,7 @@ class BusinessHoursViewModel @Inject constructor(application: Application) :
             _toastMessage.postValue(requireContext.resources.getString(R.string.toast_recording_time_is_busy))
         } else {
             val anAppointment = CreateAnAppointmentJS(patientUIString, doctorRequestString, dateRequestString, time)
+
             _checkPeriodOfTime.postValue(anAppointment)
         }
     }
@@ -77,7 +82,12 @@ class BusinessHoursViewModel @Inject constructor(application: Application) :
             }
             .subscribe(
                 { result ->
-                    _toastMessage.postValue(result.answer)
+                    if (result.answer == "Запись создана"){
+                        interactor.clearVisitDao()
+                       _checkAppointmentCreated.postValue(AppointmentCreatedJS(result.data, result.time, result.profession, result.doctor))
+                    }else{
+                        _toastMessage.postValue(result.answer)
+                    }
                 },
                 { error ->
                     _toastMessage.postValue(error.toString())

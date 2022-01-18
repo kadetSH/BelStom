@@ -5,12 +5,12 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.RelativeLayout
-import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.FragmentManager
 import com.example.belstom.databinding.ActivityCabinetBinding
 import com.example.belstom.databinding.AppBarMainBinding
+import com.example.belstom.jsonMy.AppointmentCreatedJS
 import com.example.belstom.view.cabinet.feedback.fragment.FeedbackFragment
 import com.example.belstom.view.cabinet.news.fragment.NewsDescriptionFragment
 import com.example.belstom.view.cabinet.news.fragment.NewsFragment
@@ -19,11 +19,9 @@ import com.example.belstom.view.cabinet.profile.fragment.ProfileFragment
 import com.example.belstom.view.cabinet.receptions.fragment.ReceptionDescriptionFragment
 import com.example.belstom.view.cabinet.receptions.fragment.ReceptionFragment
 import com.example.belstom.view.cabinet.receptions.recyclerReceptions.ReceptionItem
-import com.example.belstom.view.cabinet.schedule.fragment.BusinessHoursFragment
-import com.example.belstom.view.cabinet.schedule.fragment.DepartmentReceptionDaysDoctorsFragment
-import com.example.belstom.view.cabinet.schedule.fragment.DepartmentReceptionDaysFragment
-import com.example.belstom.view.cabinet.schedule.fragment.DepartmentsFragment
+import com.example.belstom.view.cabinet.schedule.fragment.*
 import com.example.belstom.view.cabinet.visits.fragment.VisitsFragment
+import com.google.android.gms.dynamic.SupportFragmentWrapper
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.android.support.DaggerAppCompatActivity
@@ -35,9 +33,9 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
     DepartmentsFragment.OnRequestDoctorsSchedule,
     FeedbackFragment.OpenFeedbackWWW, FeedbackFragment.DialingPhoneNumber,
     FeedbackFragment.SendLetter, ProfileFragment.ExitCabinet,
-        ReceptionFragment.OpenReceptionItem, ProfileFragment.OpenMyMap,
-        ProfileFragment.OpenMyVisits
-{
+    ReceptionFragment.OpenReceptionItem, ProfileFragment.OpenMyMap,
+    ProfileFragment.OpenMyVisits, BusinessHoursFragment.OpenViewAppointmentCreated,
+    AppointmentCreatedFragment.OnAppointmentCreated {
 
     object Crashlytics {
         fun log(e: Throwable) {
@@ -61,6 +59,8 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
         val view = binding.root
         setContentView(view)
 
+
+
         toolbarBinding = binding.idAppBarPatientActivity
 
         checkIntent()
@@ -77,7 +77,7 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
         )
         drawer.addDrawerListener(toggle)
         toggle.syncState()
-
+        toolbar.setTitleTextAppearance(this, R.style.MyStyleFont)  // Установка шрифта в тулбар
         //Слушаем нажатие в выпадающем меню
         binding.idNavigation.setNavigationItemSelectedListener(this)
         val fragmentManager: FragmentManager = supportFragmentManager
@@ -115,6 +115,7 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.FrameLayoutContainerContact, ProfileFragment())
+            .addToBackStack(null)
             .commit()
     }
 
@@ -122,6 +123,7 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.FrameLayoutContainerContact, NewsFragment())
+            .addToBackStack(null)
             .commit()
     }
 
@@ -129,61 +131,92 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.FrameLayoutContainerContact, FeedbackFragment())
+            .addToBackStack(null)
             .commit()
     }
 
     override fun onBackPressed() {
         when (title) {
-            resources.getString(R.string.fragment_title_news_description) -> {
-                openNews()
-            }
-            resources.getString(R.string.fragment_list_department_label_therapeutic) -> {
-                openDepartmentsFragment()
-            }
-            resources.getString(R.string.fragment_list_department_label_orthopedic) -> {
-                openDepartmentsFragment()
-            }
-            resources.getString(R.string.fragment_list_department_label_LPO) -> {
-                openDepartmentsFragment()
-            }
-            resources.getString(R.string.fragment_list_department_label_orthopedicLPO) -> {
-                openDepartmentsFragment()
-            }
-            resources.getString(R.string.fragment_list_department_label_surgery) -> {
-                openDepartmentsFragment()
-            }
-            resources.getString(R.string.fragment_list_department_label_LOR) -> {
-                openDepartmentsFragment()
-            }
-            resources.getString(R.string.fragment_title_schedule_doctor_therapeutic) -> {
-                openDepartmentReceptionDaysFragment(resources.getString(R.string.fragment_list_department_label_therapeutic))
-            }
-            resources.getString(R.string.fragment_title_schedule_doctor_orthopedic) -> {
-                openDepartmentReceptionDaysFragment(resources.getString(R.string.fragment_list_department_label_orthopedic))
-            }
-            resources.getString(R.string.fragment_title_schedule_doctor_LPO) -> {
-                openDepartmentReceptionDaysFragment(resources.getString(R.string.fragment_list_department_label_LPO))
-            }
-            resources.getString(R.string.fragment_title_schedule_doctor_orthopedicLPO) -> {
-                openDepartmentReceptionDaysFragment(resources.getString(R.string.fragment_list_department_label_orthopedicLPO))
-            }
-            resources.getString(R.string.fragment_title_schedule_doctor_surgery) -> {
-                openDepartmentReceptionDaysFragment(resources.getString(R.string.fragment_list_department_label_surgery))
-            }
-            resources.getString(R.string.fragment_title_schedule_doctor_LOR) -> {
-                openDepartmentReceptionDaysFragment(resources.getString(R.string.fragment_list_department_label_LOR))
-            }
-            resources.getString(R.string.fragment_title_schedule_doctor_single) -> {
-                openDepartmentsFragment()
-            }
-            resources.getString(R.string.fragment_title_schedule_doctor_single_time) -> {
-                openDepartmentsFragment()
-            }
-            resources.getString(R.string.fragment_title_reception_description) -> {
-                openReceptionFragment()
-            }
-            else -> {
+            resources.getString(R.string.fragment_title_profile) -> {
                 binding.drawerLayoutPatientActivity.openDrawer(GravityCompat.START)
+            }
+            resources.getString(R.string.fragment_title_news) -> {
+                binding.drawerLayoutPatientActivity.openDrawer(GravityCompat.START)
+            }
+            resources.getString(R.string.fragment_department_title) -> {
+                binding.drawerLayoutPatientActivity.openDrawer(GravityCompat.START)
+            }
+            resources.getString(R.string.fragment_title_reception) -> {
+                binding.drawerLayoutPatientActivity.openDrawer(GravityCompat.START)
+            }
+            resources.getString(R.string.fragment_title_visits) -> {
+                binding.drawerLayoutPatientActivity.openDrawer(GravityCompat.START)
+            }
+            resources.getString(R.string.fragment_title_feedback) -> {
+                binding.drawerLayoutPatientActivity.openDrawer(GravityCompat.START)
+            }
+
+
+//            resources.getString(R.string.fragment_title_news_description) -> {
+//                openNews()
+//            }
+//            resources.getString(R.string.fragment_department_title_department_therapeutic) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_department_title_department_orthopedic) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_department_title_department_LPO) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_department_title_department_surgery1) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_department_title_department_surgery2) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_department_title_department_LOR) -> {
+//                openDepartmentsFragment()
+//            }
+//            ///////до сюда проверил
+//
+//            resources.getString(R.string.fragment_title_schedule_doctor_single) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_title_schedule_doctor_single_time) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_title_reception_description) -> {
+//                openReceptionFragment()
+//            }
+//            resources.getString(R.string.fragment_list_department_label_orthopedic_speciality) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_list_department_label_therapeutic_speciality) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_list_department_label_surgery_speciality) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_list_department_label_periodontist_speciality) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_list_department_label_implantation_speciality) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_list_department_label_hygienist_speciality) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_list_department_label_orthodontist_speciality) -> {
+//                openDepartmentsFragment()
+//            }
+//            resources.getString(R.string.fragment_list_department_label_LOR_speciality) -> {
+//                openDepartmentsFragment()
+//            }
+            else -> {
+//                binding.drawerLayoutPatientActivity.openDrawer(GravityCompat.START)
+                val fm: FragmentManager = supportFragmentManager
+                fm.popBackStack()
             }
         }
     }
@@ -212,6 +245,7 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
                 R.id.FrameLayoutContainerContact,
                 DepartmentsFragment()
             )
+            .addToBackStack(null)
             .commit()
     }
 
@@ -222,6 +256,7 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
                 R.id.FrameLayoutContainerContact,
                 ReceptionFragment()
             )
+            .addToBackStack(null)
             .commit()
     }
 
@@ -232,6 +267,7 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
                 R.id.FrameLayoutContainerContact,
                 VisitsFragment()
             )
+            .addToBackStack(null)
             .commit()
     }
 
@@ -246,6 +282,7 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
                 R.id.FrameLayoutContainerContact,
                 NewsDescriptionFragment.newInstance(newsItem)
             )
+            .addToBackStack(null)
             .commit()
     }
 
@@ -256,6 +293,18 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
                 R.id.FrameLayoutContainerContact,
                 ReceptionDescriptionFragment.newInstance(receptionItem)
             )
+            .addToBackStack(null)
+            .commit()
+    }
+
+    private fun openAppointmentCreated(answer: AppointmentCreatedJS) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(
+                R.id.FrameLayoutContainerContact,
+                AppointmentCreatedFragment.newInstance(answer)
+            )
+            .addToBackStack(null)
             .commit()
     }
 
@@ -266,6 +315,7 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
                 R.id.FrameLayoutContainerContact,
                 DepartmentReceptionDaysFragment.newInstance(department)
             )
+            .addToBackStack(null)
             .commit()
     }
 
@@ -292,6 +342,7 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
                     singleBoolean
                 )
             )
+            .addToBackStack(null)
             .commit()
     }
 
@@ -304,11 +355,12 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
                     fio
                 )
             )
+            .addToBackStack(null)
             .commit()
     }
 
     override fun openWWW(pathWWW: String) {
-       val intent = Intent(Intent.ACTION_VIEW, Uri.parse(pathWWW))
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(pathWWW))
         startActivity(intent)
     }
 
@@ -341,6 +393,14 @@ class CabinetActivity : DaggerAppCompatActivity(), NavigationView.OnNavigationIt
     }
 
     override fun clickOpenMyVisits() {
+        openVisitsFragment()
+    }
+
+    override fun onCreated(answerAppointment: AppointmentCreatedJS) {
+        openAppointmentCreated(answerAppointment)
+    }
+
+    override fun onClickAllAppointment() {
         openVisitsFragment()
     }
 

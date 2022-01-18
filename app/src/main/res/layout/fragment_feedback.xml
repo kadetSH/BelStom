@@ -32,6 +32,7 @@
                 android:textColor="@color/background_news"
                 android:textSize="14sp"
                 android:breakStrategy="simple"
+                android:fontFamily="@font/sf_pro_text_light"
                 />
 
 
@@ -104,13 +105,17 @@
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_feedback_www_label"
                         android:textColor="@color/black"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/sf_pro_text_light"
+                        />
 
                     <TextView
                         android:id="@+id/fr_feedback_www_edit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fragment_feedback_www_edit" />
+                        android:text="@string/fragment_feedback_www_edit"
+                        android:fontFamily="@font/sf_pro_text_light"
+                        />
 
                 </LinearLayout>
 
@@ -164,13 +169,17 @@
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_feedback_telephone_reg_label"
                         android:textColor="@color/black"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/sf_pro_text_light"
+                        />
 
                     <TextView
                         android:id="@+id/fr_feedback_telephone_reg_edit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fragment_feedback_telephone_reg_edit" />
+                        android:text="@string/fragment_feedback_telephone_reg_edit"
+                        android:fontFamily="@font/sf_pro_text_light"
+                        />
 
                 </LinearLayout>
             </LinearLayout>
@@ -222,13 +231,17 @@
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_feedback_email_label"
                         android:textColor="@color/black"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/sf_pro_text_light"
+                        />
 
                     <TextView
                         android:id="@+id/fr_feedback_email_edit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/fragment_feedback_email_edit" />
+                        android:text="@string/fragment_feedback_email_edit"
+                        android:fontFamily="@font/sf_pro_text_light"
+                        />
 
                 </LinearLayout>
             </LinearLayout>
@@ -279,7 +292,9 @@
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_feedback_geolocation_label"
                         android:textColor="@color/black"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/sf_pro_text_light"
+                        />
 
                     <TextView
                         android:id="@+id/fr_feedback_geolocation_edit"
@@ -287,7 +302,9 @@
                         android:layout_height="wrap_content"
                         android:inputType="textCapSentences|textMultiLine"
                         android:maxLines="2"
-                        android:text="@string/fragment_feedback_geolocation_edit" />
+                        android:text="@string/fragment_feedback_geolocation_edit"
+                        android:fontFamily="@font/sf_pro_text_light"
+                        />
 
                 </LinearLayout>
             </LinearLayout>

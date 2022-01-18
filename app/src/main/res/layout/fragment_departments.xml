@@ -73,26 +73,26 @@
         app:layout_constraintTop_toBottomOf="@+id/fragment_list_department_label_orthopedic" />
 
     <TextView
-        android:id="@+id/fragment_list_department_label_orthopedicLPO"
+        android:id="@+id/fragment_list_department_label_surgery2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/fragment_list_department_label_orthopedicLPO"
+        android:text="Ортопедия ЛПО"
         android:textColor="@color/text_yellow"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/fragment_list_department_label_LPO"
         app:layout_constraintTop_toBottomOf="@+id/fragment_list_department_label_LPO" />
 
     <TextView
-        android:id="@+id/fragment_list_department_label_surgery"
+        android:id="@+id/fragment_list_department_label_surgery1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/fragment_list_department_label_surgery"
+        android:text="@string/fragment_list_department_label_surgery1"
         android:textColor="@color/text_yellow"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/fragment_list_department_label_orthopedicLPO"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_list_department_label_orthopedicLPO" />
+        app:layout_constraintStart_toStartOf="@+id/fragment_list_department_label_surgery2"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_list_department_label_surgery2" />
 
     <TextView
         android:id="@+id/fragment_list_department_label_LOR"
@@ -102,8 +102,8 @@
         android:text="@string/fragment_list_department_label_LOR"
         android:textColor="@color/text_yellow"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/fragment_list_department_label_surgery"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_list_department_label_surgery" />
+        app:layout_constraintStart_toStartOf="@+id/fragment_list_department_label_surgery1"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_list_department_label_surgery1" />
 
     <AutoCompleteTextView
         android:id="@+id/fragment_list_department_actv"

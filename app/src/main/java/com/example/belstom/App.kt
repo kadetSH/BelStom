@@ -125,7 +125,8 @@ class App : DaggerApplication() {
             retrofitServiceInterfaceSchedule,
             departmentScheduleDao,
             authorizationDao,
-            doctorsDao
+            doctorsDao,
+            visitsDao
         )
 
         getReceptionInteractor = ReceptionInteractor(

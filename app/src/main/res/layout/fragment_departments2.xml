@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        >
+
+
+        <TextView
+            android:id="@+id/id_list_department_label_title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/fragment_list_department_label_title1"
+            android:textColor="@color/text_profile"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
+
+        <TextView
+            android:id="@+id/id_list_department_label_title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/fragment_list_department_label_title2"
+            android:textColor="@color/delimiter"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/id_list_department_label_title1"
+            app:layout_constraintStart_toStartOf="@+id/id_list_department_label_title1"
+            app:layout_constraintTop_toBottomOf="@+id/id_list_department_label_title1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/fragment_list_department_actv"
+                android:layout_width="250dp"
+                android:layout_height="36dp"
+                android:background="@color/background_departments_search"
+                android:completionThreshold="1"
+                android:hint="@string/fragment_list_department_auto_complete"
+                android:textColor="@color/text_profile"
+                android:textSize="14sp"
+                tools:ignore="MissingConstraints"
+                android:paddingLeft="8dp"
+                />
+
+            <Button
+                android:id="@+id/fragment_list_department_btn_search"
+                style="@style/Theme.BelStom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/background_news"
+                android:text="@string/fragment_list_department_btn_search"
+                app:layout_constraintStart_toEndOf="@+id/fragment_list_department_actv"
+                app:layout_constraintTop_toTopOf="@+id/fragment_list_department_actv"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+
+        </LinearLayout>
+        <!--    Поля кнопок специальностей-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/fragment_list_department_speciality_orthopedic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="@string/fragment_list_department_label_orthopedic_speciality"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/white"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/departments_background_btn_speciality"
+                app:strokeWidth="0.5dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+
+            <Button
+                android:id="@+id/fragment_list_department_speciality_therapeutic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="@string/fragment_list_department_label_therapeutic_speciality"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/white"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/departments_background_btn_speciality"
+                app:strokeWidth="0.5dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+
+            <Button
+                android:id="@+id/fragment_list_department_speciality_surgery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="@string/fragment_list_department_label_surgery_speciality"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/white"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/departments_background_btn_speciality"
+                app:strokeWidth="0.5dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/fragment_list_department_speciality_periodontist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="@string/fragment_list_department_label_periodontist_speciality"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/white"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/departments_background_btn_speciality"
+                app:strokeWidth="0.5dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+
+            <Button
+                android:id="@+id/fragment_list_department_speciality_implantation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="@string/fragment_list_department_label_implantation_speciality"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/white"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/departments_background_btn_speciality"
+                app:strokeWidth="0.5dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/fragment_list_department_speciality_hygienist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="@string/fragment_list_department_label_hygienist_speciality"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/white"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/departments_background_btn_speciality"
+                app:strokeWidth="0.5dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+
+            <Button
+                android:id="@+id/fragment_list_department_speciality_orthodontist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="@string/fragment_list_department_label_orthodontist_speciality"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/white"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/departments_background_btn_speciality"
+                app:strokeWidth="0.5dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+
+            <Button
+                android:id="@+id/fragment_list_department_speciality_lor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="@string/fragment_list_department_label_LOR_speciality"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/white"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/departments_background_btn_speciality"
+                app:strokeWidth="0.5dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal" />
+
+
+        <!--    Поля кнопок отделений-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/fragment_list_department_label_therapeutic"
+                android:layout_width="170dp"
+                android:layout_height="140dp"
+                android:backgroundTint="@color/btn_color2"
+                android:drawableTop="@drawable/to3_2"
+                android:drawableTint="@color/white"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="2"
+                android:text="@string/fragment_list_department_label_therapeutic"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:cornerRadius="25dp"
+                android:layout_gravity="top|left"
+                android:paddingTop="10dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+
+
+            <Button
+                android:id="@+id/fragment_list_department_label_LPO"
+                android:layout_width="170dp"
+                android:layout_height="140dp"
+                android:backgroundTint="@color/btn_color2"
+                android:drawableTop="@drawable/lpo_2"
+                android:drawableTint="@color/white"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="3"
+                android:text="@string/fragment_list_department_label_LPO"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:cornerRadius="25dp"
+                android:layout_gravity="top|right"
+                android:paddingTop="7dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+
+        </FrameLayout>
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+
+
+<!--            android:orientation="horizontal">-->
+
+
+
+
+<!--        </LinearLayout>-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/fragment_list_department_label_surgery1"
+                android:layout_width="170dp"
+                android:layout_height="140dp"
+                android:backgroundTint="@color/btn_color2"
+                android:drawableTop="@drawable/hk1_2"
+                android:drawableTint="@color/white"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="2"
+                android:text="@string/fragment_list_department_label_surgery1"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:cornerRadius="25dp"
+                android:layout_gravity="top|left"
+                android:paddingTop="10dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+
+            <Button
+                android:id="@+id/fragment_list_department_label_surgery2"
+                android:layout_width="170dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/btn_color2"
+                android:drawableTop="@drawable/hk2_2"
+                android:drawableTint="@color/white"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="2"
+                android:text="@string/fragment_list_department_label_surgery2"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:cornerRadius="25dp"
+                android:layout_gravity="top|right"
+                android:paddingTop="10dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+
+        </FrameLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            -->
+
+<!--        </LinearLayout>-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/fragment_list_department_label_orthopedic"
+                android:layout_width="170dp"
+                android:layout_height="140dp"
+                android:backgroundTint="@color/btn_color2"
+                android:drawableTop="@drawable/orto_2"
+                android:drawableTint="@color/white"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="2"
+                android:text="@string/fragment_list_department_label_orthopedic"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:cornerRadius="25dp"
+                android:layout_gravity="top|left"
+                android:paddingTop="10dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+
+            <Button
+                android:id="@+id/fragment_list_department_label_LOR"
+                android:layout_width="170dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/btn_color2"
+                android:drawableTop="@drawable/lor_2"
+                android:drawableTint="@color/white"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="2"
+                android:text="@string/fragment_list_department_label_LOR"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:cornerRadius="25dp"
+                android:layout_gravity="top|right"
+                android:paddingTop="16dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
+
+        </FrameLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="horizontal">-->
+
+
+<!--            -->
+
+<!--        </LinearLayout>-->
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -15,5 +15,6 @@ object Constants {
     const val NEWS_ITEM = "Описание новости"
     const val RECEPTION_ITEM = "Итем приема"
     const val DAYS_COUNT = 30
+    const val ANSWER_APPOINTMENT = "answerAppointment"
 
 }

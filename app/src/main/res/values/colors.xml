@@ -10,6 +10,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="text_signature">#1C88B5</color>
     <color name="btn_color">#0683BE</color>
+    <color name="btn_color2">#6daad1</color>
     <color name="menu_color">#076fb0</color>
     <color name="menu_color_asth">#a2a6a9</color>
     <color name="text_yellow">#F8CD1C</color>
@@ -18,6 +19,10 @@
     <color name="delimiter">#D0D5DA</color>
     <color name="background_fields_info">#EDF0F3</color>
     <color name="background_news">#82898F</color>
+    <color name="background_departments_search">#E3E3E3</color>
+    <color name="text_departments_search">#C8C8C8</color>
+    <color name="departments_background_btn_speciality">#82898F</color>
+    <color name="check_mark_color">#8ed16d</color>
 
 
 

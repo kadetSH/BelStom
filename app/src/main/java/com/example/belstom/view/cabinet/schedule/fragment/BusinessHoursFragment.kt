@@ -18,6 +18,7 @@ import com.example.belstom.Constants
 import com.example.belstom.R
 import com.example.belstom.TitleController
 import com.example.belstom.databinding.FragmentBusinessHoursBinding
+import com.example.belstom.jsonMy.AppointmentCreatedJS
 import com.example.belstom.jsonMy.BusinessHoursResultJS
 import com.example.belstom.jsonMy.CreateAnAppointmentJS
 import com.example.belstom.view.cabinet.schedule.recyclerSchedule.businessHours.BusinessHoursAdapter
@@ -112,22 +113,22 @@ class BusinessHoursFragment : DaggerFragment() {
         department?.let { depName ->
             when (depName) {
                 requireContext().getString(R.string.fragment_list_department_label_therapeutic) -> setTitle(
-                    requireContext().getString(R.string.fragment_title_schedule_doctor_therapeutic)
-                )
-                requireContext().getString(R.string.fragment_list_department_label_orthopedic) -> setTitle(
-                    requireContext().getString(R.string.fragment_title_schedule_doctor_orthopedic)
+                    requireContext().getString(R.string.fragment_department_title_department_therapeutic)
                 )
                 requireContext().getString(R.string.fragment_list_department_label_LPO) -> setTitle(
-                    requireContext().getString(R.string.fragment_title_schedule_doctor_LPO)
+                    requireContext().getString(R.string.fragment_department_title_department_LPO)
                 )
-                requireContext().getString(R.string.fragment_list_department_label_orthopedicLPO) -> setTitle(
-                    requireContext().getString(R.string.fragment_title_schedule_doctor_orthopedicLPO)
+                requireContext().getString(R.string.fragment_list_department_label_surgery1) -> setTitle(
+                    requireContext().getString(R.string.fragment_department_title_department_surgery1)
                 )
-                requireContext().getString(R.string.fragment_list_department_label_surgery) -> setTitle(
-                    requireContext().getString(R.string.fragment_title_schedule_doctor_surgery)
+                requireContext().getString(R.string.fragment_list_department_label_surgery2) -> setTitle(
+                    requireContext().getString(R.string.fragment_department_title_department_surgery2)
+                )
+                requireContext().getString(R.string.fragment_list_department_label_orthopedic) -> setTitle(
+                    requireContext().getString(R.string.fragment_department_title_department_orthopedic)
                 )
                 requireContext().getString(R.string.fragment_list_department_label_LOR) -> setTitle(
-                    requireContext().getString(R.string.fragment_title_schedule_doctor_LOR)
+                    requireContext().getString(R.string.fragment_department_title_department_LOR)
                 )
             }
         }
@@ -162,6 +163,12 @@ class BusinessHoursFragment : DaggerFragment() {
             viewLifecycleOwner,
             androidx.lifecycle.Observer<CreateAnAppointmentJS> { request ->
                 writeRequestAlertDialog(requireContext(), request)
+            })
+
+        viewModel.checkAppointmentCreated.observe(
+            viewLifecycleOwner,
+            androidx.lifecycle.Observer<AppointmentCreatedJS> { answer ->
+                (activity as? OpenViewAppointmentCreated)?.onCreated(answer)
             })
     }
 
@@ -242,5 +249,11 @@ class BusinessHoursFragment : DaggerFragment() {
 
     private fun selectToast(message: String) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+    }
+
+    interface OpenViewAppointmentCreated {
+        fun onCreated(
+            answerAppointment: AppointmentCreatedJS
+        )
     }
 }

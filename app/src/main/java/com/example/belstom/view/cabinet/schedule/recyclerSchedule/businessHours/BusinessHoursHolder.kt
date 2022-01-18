@@ -14,9 +14,11 @@ class BusinessHoursHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         timeTitle.text = item.time
 
         if (item.periodOfTime == 1) {
-            timeTitle.setBackgroundColor(Color.YELLOW)
+            var color : Int = Color.parseColor("#8ed16d")
+            timeTitle.setBackgroundColor(color)
         }else{
-            timeTitle.setBackgroundColor(Color.GRAY)
+            var colorGray : Int = Color.parseColor("#ABABAB")
+            timeTitle.setBackgroundColor(colorGray)
         }
     }
 

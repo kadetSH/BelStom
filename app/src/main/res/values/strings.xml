@@ -117,35 +117,72 @@
     <string name="fragment_template_visits_edit_cavity">Полость</string>
     <!--    -->
 
+    <!--    Fragment DepartmentReceptionDays-->
+    <string name="fragment_department_reception_days_signature">Шаг 2. Выберите дату</string>
+    <!--    -->
+
     <!--    Template reception description-->
     <string name="fragment_template_reception_description_edit_procedure">Процедура</string>
     <string name="fragment_template_reception_description_edit_cavity">Полость</string>
     <!--    -->
 
     <!--    Fragment departments-->
-    <string name="fragment_list_department_label_title1">Выберите отделение</string>
+    <string name="fragment_list_department_label_title1">Шаг 1. Выберите врача/специализацию/отделение</string>
     <string name="fragment_list_department_label_title2">Выберите необходимое отделение</string>
-    <string name="fragment_list_department_label_therapeutic"><u>Терапевтическое отделение</u></string>
-    <string name="fragment_list_department_label_orthopedic"><u>Ортопедическое отделение</u></string>
-    <string name="fragment_list_department_label_LPO"><u>ЛПО</u></string>
-    <string name="fragment_list_department_label_orthopedicLPO"><u>Ортопедия ЛПО</u></string>
-    <string name="fragment_list_department_label_surgery"><u>Хирургическое отделение</u></string>
-    <string name="fragment_list_department_label_LOR"><u>ЛОР</u></string>
-    <string name="fragment_list_department_auto_complete"><u>Поиск врача по фамилии</u></string>
-    <string name="fragment_list_department_btn_search"><u>Поиск</u></string>
+    <string name="fragment_list_department_label_therapeutic">Терапевтическое отделение</string>
+    <string name="fragment_list_department_label_orthopedic">Ортопедическое отделение</string>
+    <string name="fragment_list_department_label_LOR">ЛОР-кабинет</string>
+    <string name="fragment_list_department_label_LPO_base"><u>ЛПО</u></string>
+    <string name="fragment_list_department_label_surgery1">Хирургическое отделение №1</string>
+    <string name="fragment_list_department_label_surgery2">Хирургическое отделение №2</string>
+    <string name="fragment_list_department_label_LPO">
+  Лечебно-
+  профилактическое
+  отделение
+</string>
+    <string name="fragment_list_department_auto_complete"><font size="20"></font><small>поиск по фамилии</small></string>
+    <string name="fragment_list_department_btn_search">ПОИСК</string>
+    <string name="fragment_list_department_label_orthopedic_speciality">ОРТОПЕД</string>
+    <string name="fragment_list_department_label_therapeutic_speciality">ТЕРАПЕВТ</string>
+    <string name="fragment_list_department_label_surgery_speciality">ХИРУРГ</string>
+    <string name="fragment_list_department_label_periodontist_speciality">ПАРОДОНТОЛОГ</string>
+    <string name="fragment_list_department_label_implantation_speciality">ИМПЛАНТАЦИЯ</string>
+    <string name="fragment_list_department_label_hygienist_speciality">ГИГИЕНИСТ</string>
+    <string name="fragment_list_department_label_orthodontist_speciality">ОРТОДОНТ</string>
+    <string name="fragment_list_department_label_LOR_speciality">ЛОР</string>
+    <string name="fragment_list_department_label_orthopedic_speciality_request">Ортопед</string>
+    <string name="fragment_list_department_label_therapeutic_speciality_request">Терапевт</string>
+    <string name="fragment_list_department_label_surgery_speciality_request">Хирург</string>
+    <string name="fragment_list_department_label_periodontist_speciality_request">Пародонтолог</string>
+    <string name="fragment_list_department_label_implantation_speciality_request">Имплантация</string>
+    <string name="fragment_list_department_label_hygienist_speciality_request">Гигиенист</string>
+    <string name="fragment_list_department_label_orthodontist_speciality_request">Ортодонт</string>
+    <string name="fragment_list_department_label_LOR_speciality_request">ЛОР</string>
+    <!--    -->
+
+    <!--    Фрагмент appointment created-->
+    <string name="fragment_appointment_created_label_title">Запись оформлена!</string>
+    <string name="fragment_appointment_created_hint_date">Дата приема</string>
+    <string name="fragment_appointment_created_hint_time">Время</string>
+    <string name="fragment_appointment_created_hint_profession">Профессия врача</string>
+    <string name="fragment_appointment_created_hint_doctor">Врач ФИО</string>
+    <string name="fragment_appointment_created_btn">Все записи</string>
+    <string name="fragment_appointment_created_title">Запись оформлена</string>
     <!--    -->
 
     <!--    Названия фрагментов в титул-->
     <string name="fragment_title_profile">ПРОФИЛЬ</string>
     <string name="fragment_title_news">НОВОСТИ</string>
     <string name="fragment_title_news_description">НОВОСТИ: ОПИСАНИЕ</string>
-    <string name="fragment_title_departments">ЗАПИСЬ НА ПРИЕМ</string>
-    <string name="fragment_title_schedule_doctor_therapeutic">-> ТЕРАПЕВТИЧЕСКОЕ ОТДЕЛЕНИЕ</string>
-    <string name="fragment_title_schedule_doctor_orthopedic">-> ОРТОПЕДИЧЕСКОЕ ОТДЕЛЕНИЕ</string>
-    <string name="fragment_title_schedule_doctor_LPO">-> ЛПО</string>
-    <string name="fragment_title_schedule_doctor_orthopedicLPO">-> ОРТОПЕДИЯ ЛПО</string>
-    <string name="fragment_title_schedule_doctor_surgery">-> ХИРУРГИЧЕСКОЕ ОТДЕЛЕНИЕ</string>
-    <string name="fragment_title_schedule_doctor_LOR">-> ЛОР</string>
+<!--    <string name="fragment_title_departments">ЗАПИСЬ НА ПРИЕМ</string>-->
+    <string name="fragment_department_title_department_therapeutic">ЗАПИСЬ НА ПРИЕМ: ТО</string>
+    <string name="fragment_department_title_department_orthopedic">ЗАПИСЬ НА ПРИЕМ: ОРТО</string>
+    <string name="fragment_department_title_department_LPO">ЗАПИСЬ НА ПРИЕМ: ЛПО</string>
+<!--    <string name="fragment_title_schedule_doctor_orthopedicLPO">-> ОРТОПЕДИЯ ЛПО</string>-->
+    <string name="fragment_department_title_department_surgery1">ЗАПИСЬ НА ПРИЕМ: ХО1</string>
+    <string name="fragment_department_title_department_surgery2">ЗАПИСЬ НА ПРИЕМ: ХО2</string>
+    <string name="fragment_department_title_department_LOR">ЗАПИСЬ НА ПРИЕМ: ЛОР</string>
+    <string name="fragment_department_title">ЗАПИСЬ НА ПРИЕМ</string>
     <string name="fragment_title_schedule_doctor_single">-> ГРАФИК ВРАЧА</string>
     <string name="fragment_title_schedule_doctor_single_time">-> ЧАСЫ ПРИЕМА ВРАЧА</string>
     <string name="fragment_title_feedback">ОБРАТНАЯ СВЯЗЬ</string>
@@ -171,8 +208,11 @@
 
     <!--    Template business hours-->
     <string name="template_business_hours_time">Время</string>
-    <string name="template_business_title">Врач ФИО</string>
     <string name="template_business_date">Дата</string>
+    <string name="template_business_signature">Шаг 3. Выберите дату</string>
+    <string name="template_business_label_doctor">Врач:</string>
+    <string name="template_business_hint_edit_doctor">Врач ФИО</string>
+    <string name="template_business_label_date">Дата:</string>
     <!--    -->
 
     <!--    Child_period_days-->
@@ -183,7 +223,7 @@
 
     <!--    Template parent_period_days-->
     <string name="template_parent_period_days_fio">Фамилия Имя Отчество</string>
-    <string name="template_parent_period_days_profession">Заведующий терапевтического отделения</string>
+    <string name="template_parent_period_days_profession">Заведующий отделением</string>
     <!--    -->
 
 </resources>

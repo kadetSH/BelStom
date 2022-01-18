@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@android:drawable/editbox_background"
-    android:layout_margin="2dp"
-    >
+    android:layout_marginStart="3dp"
+    android:layout_marginEnd="3dp"
+    android:gravity="center">
+
+    <!--    android:background="@drawable/roundedbutton"-->
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
+        android:background="@drawable/roundedbutton"
 
         >
 
@@ -20,24 +23,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:hint="@string/template_child_period_days_day" />
+            android:hint="@string/template_child_period_days_day"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/sf_pro_text_light"
+             />
 
         <TextView
             android:id="@+id/id_oh_edit_date_RC00"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:hint="@string/template_child_period_days_date"
             android:textColor="@color/white"
-            android:background="@color/btn_color"
             android:textStyle="bold"
-            android:hint="@string/template_child_period_days_date" />
+            android:background="@color/btn_color2"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
         <TextView
             android:id="@+id/id_oh_edit_reception_RC00"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:hint="@string/template_child_period_days_reception" />
+            android:hint="@string/template_child_period_days_reception"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/sf_pro_text_light"
+             />
 
 
     </LinearLayout>

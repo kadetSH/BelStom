@@ -38,6 +38,10 @@ class FeedbackFragment: DaggerFragment() {
     private lateinit var btnVK: ImageView
     private lateinit var btnInstagram: ImageView
 
+
+    private lateinit var labelEmail: TextView
+    private lateinit var labelGeolocation: TextView
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -58,27 +62,49 @@ class FeedbackFragment: DaggerFragment() {
     }
 
     private fun init() {
+
+
+        labelGeolocation = binding.frFeedbackGeolocationEdit
+
         btnWWW = binding.frFeedbackBtnWww
         btnWWW.setOnClickListener { www ->
             (activity as? OpenFeedbackWWW)?.openWWW(editWWW.text.toString())
         }
         editWWW = binding.frFeedbackWwwEdit
+        editWWW.setOnClickListener { www ->
+            (activity as? OpenFeedbackWWW)?.openWWW(editWWW.text.toString())
+        }
+
         btnRegTelephone = binding.frFeedbackBtnTelephoneReg
         btnRegTelephone.setOnClickListener { regNumber ->
             (activity as? DialingPhoneNumber)?.dialingNumber(editRegTelephone.text.toString())
         }
         editRegTelephone = binding.frFeedbackTelephoneRegEdit
+        editRegTelephone.setOnClickListener { regNumber ->
+            (activity as? DialingPhoneNumber)?.dialingNumber(editRegTelephone.text.toString())
+        }
+
+
         btnEmail = binding.frFeedbackBtnEmail
         btnEmail.setOnClickListener {
             (activity as? SendLetter)?.sendLetter(editEmail.text.toString())
         }
         editEmail = binding.frFeedbackEmailEdit
+        editEmail.setOnClickListener {
+            (activity as? SendLetter)?.sendLetter(editEmail.text.toString())
+        }
+
         btnGeolocation = binding.frFeedbackBtnGeolocation
         btnGeolocation.setOnClickListener {
             val geolocation = "https://www.google.ru/maps/place/ул.+Преображенская,+56,+Белгород,+Белгородская+обл.,+308009/@50.5980994,36.5935071,17z/data=!3m1!4b1!4m5!3m4!1s0x41266a59c8b381cd:0xbca5b2cdcc2ca4a1!8m2!3d50.5980994!4d36.5956958?hl=ru&authuser=0"
             (activity as? OpenFeedbackWWW)?.openWWW(geolocation)
         }
         editGeolocation = binding.frFeedbackGeolocationEdit
+        editGeolocation.setOnClickListener {
+            val geolocation = "https://www.google.ru/maps/place/ул.+Преображенская,+56,+Белгород,+Белгородская+обл.,+308009/@50.5980994,36.5935071,17z/data=!3m1!4b1!4m5!3m4!1s0x41266a59c8b381cd:0xbca5b2cdcc2ca4a1!8m2!3d50.5980994!4d36.5956958?hl=ru&authuser=0"
+            (activity as? OpenFeedbackWWW)?.openWWW(geolocation)
+        }
+
         btnVK = binding.frFeedbackBtnVk
         btnVK.setOnClickListener {
             val vk = "https://vk.com/belstom_com"

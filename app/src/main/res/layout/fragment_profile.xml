@@ -32,7 +32,9 @@
                     android:hint="@string/fragment_profile_hint_title"
                     android:textColor="@color/black"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/sf_pro_text_light"
+                    />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -47,7 +49,9 @@
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_profile_label_id"
                         android:textColor="@color/black"
-                        android:textSize="18dp" />
+                        android:textSize="18dp"
+                        android:fontFamily="@font/sf_pro_text_light"
+                        />
 
                     <TextView
                         android:id="@+id/fr_profile_edit_id"
@@ -55,7 +59,9 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/fragment_profile_label_id"
                         android:textColor="@color/black"
-                        android:textSize="18dp" />
+                        android:textSize="18dp"
+                        android:fontFamily="@font/sf_pro_text_light"
+                        />
                 </LinearLayout>
 
                 <TextView
@@ -65,7 +71,9 @@
                     android:layout_gravity="center"
                     android:hint="@string/fragment_profile_edit_gender"
                     android:textColor="@color/black"
-                    android:textSize="18dp" />
+                    android:textSize="18dp"
+                    android:fontFamily="@font/sf_pro_text_light"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -85,7 +93,9 @@
                         android:textSize="10sp"
                         app:icon="@drawable/tooth_50"
                         app:iconPadding="1dp"
-                        app:iconSize="26dp" />
+                        app:iconSize="26dp"
+                        android:fontFamily="@font/sf_pro_text_light"
+                        />
 
                     <Button
                         android:id="@+id/fr_profile_btn_treatment_plan"
@@ -97,7 +107,9 @@
                         android:textSize="10sp"
                         app:icon="@drawable/docs_80"
                         app:iconPadding="1dp"
-                        app:iconSize="30dp" />
+                        app:iconSize="30dp"
+                        android:fontFamily="@font/sf_pro_text_light"
+                        />
                 </LinearLayout>
 
             </LinearLayout>
@@ -107,7 +119,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/delimiter" />
+                android:background="@color/delimiter"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:id="@+id/fr_profile_label_name"
@@ -117,7 +131,9 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/fragment_profile_label_name"
                 android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:id="@+id/fr_profile_edit_name"
@@ -127,7 +143,9 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_label_name"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:layout_width="match_parent"
@@ -143,7 +161,9 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/fragment_profile_label_surname"
                 android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:id="@+id/fr_profile_edit_surname"
@@ -153,7 +173,9 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_label_surname"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:layout_width="match_parent"
@@ -169,7 +191,9 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/fragment_profile_label_patronymic"
                 android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:id="@+id/fr_profile_edit_patronymic"
@@ -179,7 +203,9 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_label_patronymic"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:layout_width="match_parent"
@@ -195,7 +221,9 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/fragment_profile_label_telephone"
                 android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:id="@+id/fr_profile_edit_telephone"
@@ -205,7 +233,9 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_label_telephone"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:layout_width="match_parent"
@@ -221,7 +251,9 @@
                 android:gravity="center_vertical"
                 android:text="@string/fragment_profile_label_personal_information"
                 android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:layout_width="match_parent"
@@ -236,7 +268,9 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/fragment_profile_label_birth"
                 android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:id="@+id/fr_profile_edit_birth"
@@ -246,7 +280,9 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_label_birth"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:layout_width="match_parent"
@@ -262,7 +298,9 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/fragment_profile_gender2"
                 android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:id="@+id/fr_profile_edit_gender_2"
@@ -272,7 +310,9 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_gender2"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:layout_width="match_parent"
@@ -288,7 +328,9 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/fragment_profile_label_address"
                 android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:id="@+id/fr_profile_edit_address"
@@ -298,7 +340,9 @@
                 android:layout_marginTop="10dp"
                 android:hint="@string/fragment_profile_label_address"
                 android:textColor="@color/text_profile"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:fontFamily="@font/sf_pro_text_light"
+                />
 
             <TextView
                 android:layout_width="match_parent"
@@ -318,7 +362,9 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
                     android:text="@string/fragment_profile_btn_exit"
-                    android:textColor="@color/text_signature" />
+                    android:textColor="@color/text_signature"
+                    android:fontFamily="@font/sf_pro_text_light"
+                    />
 
             </LinearLayout>
 

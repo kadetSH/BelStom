@@ -60,6 +60,7 @@
                         android:textColor="@color/black"
                         android:textSize="14sp"
                         android:layout_marginTop="10dp"
+                        android:fontFamily="@font/sf_pro_text_light"
                         />
 
                     <TextView
@@ -69,6 +70,7 @@
                         android:hint="@string/fragment_template_visits_edit_date"
                         android:textColor="@color/black"
                         android:textSize="12sp"
+                        android:fontFamily="@font/sf_pro_text_light"
                         />
                 </LinearLayout>
 
@@ -85,7 +87,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/fragment_template_visits_label_doctor"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:fontFamily="@font/sf_pro_text_light"
+                    />
 
                 <TextView
                     android:id="@+id/template_visits_edit_doctor"
@@ -97,6 +101,7 @@
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/sf_pro_text_light"
                     />
 
             </LinearLayout>

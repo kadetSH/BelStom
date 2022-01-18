@@ -37,7 +37,9 @@
             android:text="@string/header_title"
             android:textColor="@color/text_menu"
             android:textSize="42sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
     </LinearLayout>
 

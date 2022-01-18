@@ -163,7 +163,6 @@ class DepartmentReceptionDaysFragment : DaggerFragment() {
                 listDoctors
             )
         ) { parentModel: DayParentModelOfDoctors, childModel: DayChildModelOfDoctors ->
-            println("")
 
         }
         recyclerView?.layoutManager = layoutManager

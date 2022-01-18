@@ -20,7 +20,9 @@
             android:text="@string/fragment_start_auth_title"
             android:textColor="@color/black"
             android:textSize="28sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
         <TextView
             android:id="@+id/id_fr_start_auth_label_surname"
@@ -30,7 +32,9 @@
             android:layout_marginTop="20dp"
             android:text="@string/fragment_start_auth_label_surname"
             android:textColor="@color/text_signature"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
         <EditText
             android:id="@+id/id_fr_start_auth_edit_surname"
@@ -40,7 +44,9 @@
             android:hint="@string/fragment_start_auth_label_surname"
             android:importantForAutofill="no"
             android:inputType="textPersonName|textCapWords"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
         <TextView
             android:id="@+id/id_fr_start_auth_label_name"
@@ -50,7 +56,9 @@
             android:layout_marginTop="20dp"
             android:text="@string/fragment_start_auth_label_name"
             android:textColor="@color/text_signature"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
         <EditText
             android:id="@+id/id_fr_start_auth_edit_name"
@@ -60,7 +68,9 @@
             android:hint="@string/fragment_start_auth_label_name"
             android:importantForAutofill="no"
             android:inputType="textPersonName|textCapWords"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
         <TextView
             android:id="@+id/id_fr_start_auth_label_patronymic"
@@ -70,7 +80,9 @@
             android:layout_marginTop="20dp"
             android:text="@string/fragment_start_auth_label_patronymic"
             android:textColor="@color/text_signature"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
         <EditText
             android:id="@+id/id_fr_start_auth_edit_patronymic"
@@ -80,7 +92,9 @@
             android:hint="@string/fragment_start_auth_label_patronymic"
             android:importantForAutofill="no"
             android:inputType="textPersonName|textCapWords"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
         <TextView
             android:id="@+id/id_fr_start_auth_label_password"
@@ -90,7 +104,9 @@
             android:layout_marginTop="20dp"
             android:text="@string/fragment_start_auth_label_password"
             android:textColor="@color/text_signature"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
         <EditText
             android:id="@+id/id_fr_start_auth_edit_password"
@@ -100,7 +116,9 @@
             android:ems="10"
             android:importantForAutofill="no"
             android:inputType="textPassword"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
         <Button
             android:id="@+id/id_fr_start_auth_button"
@@ -109,7 +127,9 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/btn_color"
-            android:text="@string/fragment_start_auth_btn" />
+            android:text="@string/fragment_start_auth_btn"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
         <TextView
             android:id="@+id/id_fr_start_auth_label_msg"
@@ -120,7 +140,9 @@
             android:gravity="center"
             android:text="@string/fragment_start_auth_msg"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
 
     </LinearLayout>

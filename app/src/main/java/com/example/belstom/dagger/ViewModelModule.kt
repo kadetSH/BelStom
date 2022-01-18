@@ -11,10 +11,7 @@ import com.example.belstom.view.cabinet.news.viewModel.NewsViewModel
 import com.example.belstom.view.cabinet.profile.viewModel.ProfileViewModel
 import com.example.belstom.view.cabinet.receptions.viewModel.ReceptionDescriptionViewModel
 import com.example.belstom.view.cabinet.receptions.viewModel.ReceptionViewModel
-import com.example.belstom.view.cabinet.schedule.viewModel.BusinessHoursViewModel
-import com.example.belstom.view.cabinet.schedule.viewModel.DepartmentReceptionDaysDoctorsViewModel
-import com.example.belstom.view.cabinet.schedule.viewModel.DepartmentReceptionDaysViewModel
-import com.example.belstom.view.cabinet.schedule.viewModel.DepartmentsViewModel
+import com.example.belstom.view.cabinet.schedule.viewModel.*
 import com.example.belstom.view.cabinet.visits.viewModel.VisitsViewModel
 import dagger.Binds
 import dagger.MapKey
@@ -94,6 +91,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(VisitsViewModel::class)
     abstract fun bindVisitsViewModel(favoritesFilmsViewModel: VisitsViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(AppointmentCreatedViewModel::class)
+    abstract fun bindAppointmentCreatedViewModel(favoritesFilmsViewModel: AppointmentCreatedViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory

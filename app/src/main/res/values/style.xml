@@ -24,22 +24,28 @@
 
     <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
         <item name="android:activatedBackgroundIndicator">@drawable/navigation_view_selector</item>
-
     </style>
 
     <style name="ThemeOverlay.AppCompat.navTheme">
-
         <!-- Color of text and icon when SELECTED -->
         <item name="background">@color/menu_color2</item>
         <item name="tint">@color/menu_color2</item>
         <item name="android:tint">@color/menu_color2</item>
         <item name="itemTextColor">@color/menu_color2</item>
-
         <!-- Background color when SELECTED -->
         <item name="colorControlHighlight">@color/text_yellow</item>
         <item name="android:activatedBackgroundIndicator">@drawable/navigation_view_selector</item>
-
     </style>
+
+    <style name="RoundedButton1">
+        <item name="android:background">@drawable/button_frame</item>
+    </style>
+
+    <style name="MyStyleFont">
+        <item name="android:fontFamily">@font/sf_pro_text_light</item>
+    </style>
+
+
 
 
 </resources>

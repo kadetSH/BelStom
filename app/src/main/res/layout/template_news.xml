@@ -28,6 +28,7 @@
                 android:textColor="@color/text_profile"
                 android:textSize="14dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/sf_pro_text_light"
                 />
 
             <Button
@@ -38,6 +39,7 @@
                 style="@style/Theme.Design.Light"
                 android:backgroundTint="@color/btn_color"
                 android:text="@string/fragment_template_btn"
+                android:fontFamily="@font/sf_pro_text_light"
                 />
 
 
@@ -53,7 +55,8 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:layout_marginTop="8dp"
-            android:inputType="textCapSentences|textMultiLine" />
+            android:inputType="textCapSentences|textMultiLine"
+            android:fontFamily="@font/sf_pro_text_light"/>
 
         <TextView
             android:id="@+id/fr_template_news_content"
@@ -63,6 +66,7 @@
             android:textColor="@color/text_profile"
             android:ellipsize="end"
             android:maxLines="3"
+            android:fontFamily="@font/sf_pro_text_light"
             />
 
 

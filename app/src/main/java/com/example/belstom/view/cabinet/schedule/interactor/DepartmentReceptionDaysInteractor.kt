@@ -10,6 +10,7 @@ import com.example.belstom.room.doctors.DoctorsDao
 import com.example.belstom.room.doctors.RDoctors
 import com.example.belstom.room.schedule.DepartmentScheduleDao
 import com.example.belstom.room.schedule.RDepartmentSchedule
+import com.example.belstom.room.visits.VisitsDao
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
 
@@ -17,7 +18,8 @@ class DepartmentReceptionDaysInteractor(
     private val retrofitServiceInterfaceSchedule: RetrofitServiceInterfaceSchedule,
     private val departmentScheduleDao: DepartmentScheduleDao,
     private val authorizationDao: AuthorizationDao,
-    private val doctorsDao: DoctorsDao
+    private val doctorsDao: DoctorsDao,
+    private val visitsDao: VisitsDao
 ) {
 
     fun getLiveDate(department: String): LiveData<List<RDepartmentSchedule>> {
@@ -44,6 +46,10 @@ class DepartmentReceptionDaysInteractor(
     fun getPatientUI(): String{
         val firstLogin: RLogin = authorizationDao.getFirstLogin()
         return firstLogin.ui
+    }
+
+    fun clearVisitDao(){
+        visitsDao.deleteAllVisits()
     }
 
     fun makeToAppointment(anAppointmentJS: CreateAnAppointmentJS): Observable<AnswerOfCreateAnAppointmentJS> {

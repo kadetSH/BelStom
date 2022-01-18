@@ -20,7 +20,9 @@
             android:text="@string/fragment_start_title"
             android:textColor="@color/black"
             android:textSize="58sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
         <TextView
             android:id="@+id/fr_start_content"
@@ -32,7 +34,7 @@
             android:textColor="@color/black"
             android:textSize="28sp"
             android:textStyle="bold"
-            android:fontFamily="@font/mon_amour_one_medium"
+            android:fontFamily="@font/sf_pro_text_light"
             />
 
         <Button
@@ -42,7 +44,9 @@
             android:layout_gravity="center"
             android:layout_marginTop="170dp"
             android:backgroundTint="@color/btn_color"
-            android:text="@string/fragment_start_btn" />
+            android:text="@string/fragment_start_btn"
+            android:fontFamily="@font/sf_pro_text_light"
+            />
 
     </LinearLayout>
 
@@ -61,7 +65,7 @@
             android:layout_height="match_parent"
             android:text="@string/fragment_start_label_reg"
             android:textColor="@color/black"
-
+            android:fontFamily="@font/sf_pro_text_light"
             />
 
         <TextView
@@ -71,6 +75,7 @@
             android:text="@string/fragment_start_edit_reg"
             android:layout_marginStart="20dp"
             android:textColor="@color/text_signature"
+            android:fontFamily="@font/sf_pro_text_light"
             />
 
     </LinearLayout>
